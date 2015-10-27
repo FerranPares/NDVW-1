@@ -537,6 +537,31 @@ BoxCollider:
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: 24df20f059a511b419077a3c8bc0187f, type: 3}
   m_PrefabInternal: {fileID: 681229917}
+--- !u!114 &1729526779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1729526778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc217aff4afe1044abc328ff39085f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aspectName: 0
+--- !u!114 &1729526780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1729526778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0bde5d71d1ce714daf394b3e729b010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cSteering: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &1729526781
 MonoBehaviour:
   m_ObjectHideFlags: 0
