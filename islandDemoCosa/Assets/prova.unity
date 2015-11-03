@@ -360,7 +360,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 24df20f059a511b419077a3c8bc0187f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 51.9300003
+      value: 99.5999985
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 24df20f059a511b419077a3c8bc0187f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -368,7 +368,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 24df20f059a511b419077a3c8bc0187f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 152.160004
+      value: 159.699997
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 24df20f059a511b419077a3c8bc0187f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -738,7 +738,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1815068964}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0bde5d71d1ce714daf394b3e729b010, type: 3}
   m_Name: 
@@ -754,7 +754,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1815068964}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 921bd605a9966413cb772fb192226a5f, type: 3}
   m_Name: 
@@ -778,6 +778,38 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1815068972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1815068964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b2a9ac5fc118f45af58f97ee4c0067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cSteering: {fileID: 0}
+  movementSpeed: 3
+  rotSpeed: 2
+  animator: {fileID: 0}
+  deltaX: 50
+  deltaZ: 50
+--- !u!114 &1815068974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1815068964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fadd96e71d04da1849fa0f42d60409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weight: 1
+  _targetPoint: {x: 0, y: 0, z: 0}
+  _considerVelocity: 0
+  _defaultToCurrentPosition: 1
 --- !u!1 &1910167319 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100140, guid: dcdd9efcf7611a04092229da6a3ab488, type: 3}
