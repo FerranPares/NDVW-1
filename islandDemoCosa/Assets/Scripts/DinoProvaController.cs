@@ -30,9 +30,9 @@ public class DinoProvaController : MonoBehaviour {
         //robotTargetPos = cSteering.TargetPoint;
         robotTargetPos = cSteering.Target.position;
         Debug.Log("AKiiiiiiiiiiiiiii2222222222222");
-        if (Vector3.Distance(robotCurrPos, robotTargetPos) < 3.0) {
+        if (Vector3.Distance(robotCurrPos, robotTargetPos) < 10.0) {
             Debug.Log("STOP, disable steering, Transition to iddle");
-            //cSteering.enabled = false;
+            cSteering.enabled = false;
             animator.SetInteger("speed", 0);
             Debug.Log("AKiiiiiiiiiiiiiii33333333");
         }   
