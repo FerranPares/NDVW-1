@@ -136,6 +136,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 100140, guid: dcdd9efcf7611a04092229da6a3ab488, type: 3}
+      propertyPath: m_TagString
+      value: Gorilla
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dcdd9efcf7611a04092229da6a3ab488, type: 3}
   m_IsPrefabParent: 0
@@ -231,6 +235,52 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b5e53c010f4d04ecfbcebd0ab2bc89d2, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &467297060 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 199642, guid: 515eb4b3e722643ce878d1850e0e49ba, type: 2}
+  m_PrefabInternal: {fileID: 1856593004}
+--- !u!114 &467297063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 467297060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa5ed335f15c43169a7097f25d7aecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _drawGizmos: 0
+  _center: {x: 0, y: 0, z: 0}
+  _radius: 1
+  _minSpeedForTurning: .100000001
+  _movementPriority: 0
+  _turnTime: .25
+  _mass: 1
+  _allowedMovementAxes: {x: 1, y: 1, z: 1}
+  _arrivalRadius: .25
+  _maxSpeed: 1
+  _maxForce: 10
+  _canMove: 1
+  _queueName: Steering
+  _tickLength: .100000001
+  _maxQueueProcessedPerUpdate: 20
+  _traceAdjustments: 0
+--- !u!114 &467297065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 467297060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921bd605a9966413cb772fb192226a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weight: 1
+  _target: {fileID: 1910167320}
+  _considerVelocity: 1
+  _distance: {x: 0, y: 0, z: 0}
 --- !u!1001 &605310231
 Prefab:
   m_ObjectHideFlags: 0
@@ -678,7 +728,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 441800, guid: 515eb4b3e722643ce878d1850e0e49ba, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 72.0382004
+      value: 65.1699982
       objectReference: {fileID: 0}
     - target: {fileID: 441800, guid: 515eb4b3e722643ce878d1850e0e49ba, type: 2}
       propertyPath: m_LocalPosition.y
@@ -686,7 +736,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 441800, guid: 515eb4b3e722643ce878d1850e0e49ba, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 183.835648
+      value: 158.059998
       objectReference: {fileID: 0}
     - target: {fileID: 441800, guid: 515eb4b3e722643ce878d1850e0e49ba, type: 2}
       propertyPath: m_LocalRotation.x
@@ -706,7 +756,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 441800, guid: 515eb4b3e722643ce878d1850e0e49ba, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 199642, guid: 515eb4b3e722643ce878d1850e0e49ba, type: 2}
       propertyPath: m_Name
@@ -715,3 +765,53 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 515eb4b3e722643ce878d1850e0e49ba, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1910167319 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100140, guid: dcdd9efcf7611a04092229da6a3ab488, type: 3}
+  m_PrefabInternal: {fileID: 31592464}
+--- !u!4 &1910167320 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400140, guid: dcdd9efcf7611a04092229da6a3ab488, type: 3}
+  m_PrefabInternal: {fileID: 31592464}
+--- !u!114 &1910167322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1910167319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fadd96e71d04da1849fa0f42d60409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weight: 1
+  _targetPoint: {x: 85, y: 4.88000011, z: 193.630005}
+  _considerVelocity: 0
+  _defaultToCurrentPosition: 0
+--- !u!114 &1910167323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1910167319}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa5ed335f15c43169a7097f25d7aecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _drawGizmos: 0
+  _center: {x: 0, y: 0, z: 0}
+  _radius: 1
+  _minSpeedForTurning: .100000001
+  _movementPriority: 0
+  _turnTime: .25
+  _mass: 1
+  _allowedMovementAxes: {x: 1, y: 1, z: 1}
+  _arrivalRadius: .25
+  _maxSpeed: 1
+  _maxForce: 10
+  _canMove: 1
+  _queueName: Steering
+  _tickLength: .100000001
+  _maxQueueProcessedPerUpdate: 20
+  _traceAdjustments: 0
