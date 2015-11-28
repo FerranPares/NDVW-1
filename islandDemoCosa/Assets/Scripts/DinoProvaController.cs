@@ -14,9 +14,14 @@ public class DinoProvaController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		cSteering = GetComponent<SteerToFollow>();
-        animator = GetComponent<Animator>();
+		cSteering = gameObject.AddComponent<SteerToFollow>();
+		//cSteering.ConsiderVelocity = true;
+		//cSteering = GetComponent<SteerToFollow>();
 		cSteering.Target = target;
+		Debug.Log ("ActiveEnabled: " + cSteering.isActiveAndEnabled);
+		//cSteering.enabled = true;
+
+        animator = GetComponent<Animator>();
 		animator.SetInteger("speed", speed);
 	}
 	
