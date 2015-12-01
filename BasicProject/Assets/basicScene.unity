@@ -385,16 +385,30 @@ MonoBehaviour:
       value="0" type="System.Single" id="_maxPathLength" /><field type="System.Collections.Generic.List"
       id="_graphTags" elementtype="System.String" /></reference><reference type="RAIN.Perception.BasicSenses"
       refcount="1" id="6"><field type="System.Collections.Generic.List" id="_sensors"
-      elementtype="RAIN.Perception.Sensors.RAINSensor" /></reference><reference type="RAIN.Perception.Sensors.VisualSensor"
-      refcount="0" id="7" /><reference type="RAIN.Memory.BasicMemory+MemoryItem" refcount="1"
-      id="8"><field value="fe" type="System.String" id="Key" /><field value="UnityEngine.Vector3"
-      type="System.Type" id="ValueType" /><field value="0,0,0" type="UnityEngine.Vector3"
-      id="Value" /></reference><reference type="RAIN.Memory.BasicMemory+MemoryItem"
-      refcount="0" id="9" /><reference type="RAIN.Memory.BasicMemory+MemoryItem" refcount="0"
-      id="10" /></references></component>
+      elementtype="RAIN.Perception.Sensors.RAINSensor"><field type="RAIN.Perception.Sensors.VisualSensor"
+      reference="7" id="element0" /></field></reference><reference type="RAIN.Perception.Sensors.VisualSensor"
+      refcount="1" id="7"><field value="True" type="System.Boolean" id="_showVisual"
+      /><field value="v_sensor" type="System.String" id="_sensorName" /><field value="True"
+      type="System.Boolean" id="_isActive" /><field value="0,0.6,0,1" type="UnityEngine.Color"
+      id="_sensorColor" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="2"
+      /><field value="0,0,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
+      value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field type="System.Collections.Generic.List"
+      id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
+      /><field value="30" type="System.Single" id="_range" /><field value="False"
+      type="System.Boolean" id="_canDetectSelf" /><field value="360" type="System.Single"
+      id="_horizontalAngle" /><field value="180" type="System.Single" id="_verticalAngle"
+      /><field value="False" type="System.Boolean" id="_lineOfSight" /><field value="-1"
+      type="UnityEngine.LayerMask" id="_lineOfSightMask" /></reference><reference
+      type="RAIN.Memory.BasicMemory+MemoryItem" refcount="1" id="8"><field value="fe"
+      type="System.String" id="Key" /><field value="UnityEngine.Vector3" type="System.Type"
+      id="ValueType" /><field value="0,0,0" type="UnityEngine.Vector3" id="Value"
+      /></reference><reference type="RAIN.Memory.BasicMemory+MemoryItem" refcount="0"
+      id="9" /><reference type="RAIN.Memory.BasicMemory+MemoryItem" refcount="0" id="10"
+      /></references></component>
     _serializedGameObjects:
     - {fileID: 1494960860}
     - {fileID: 11400000, guid: 74a06972ce5e5c046bb2b9e76abcaae3, type: 2}
+    - {fileID: 1494960859}
     _serializedCustomData: []
 --- !u!1 &798124356
 GameObject:
@@ -1041,10 +1055,11 @@ MonoBehaviour:
       type="System.Boolean" id="_isActive" /><field value="1,0.08088237,0.08088237,1"
       type="UnityEngine.Color" id="_aspectColor" /><field value="-0.5" type="System.Single"
       id="_outlineColorOffset" /><field value="0.4" type="System.Single" id="_selectionColorOffset"
-      /><field value="1" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
-      id="_mountPoint" gameobject="1" /><field value="0,0.5,0" type="UnityEngine.Vector3"
+      /><field value="10" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
+      id="_mountPoint" gameobject="1" /><field value="0,0,0" type="UnityEngine.Vector3"
       id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
-      /></reference></references></component>
+      /></reference><reference type="RAIN.Entities.Aspects.VisualAspect" refcount="0"
+      id="2" /></references></component>
     _serializedGameObjects:
     - {fileID: 991101652}
     - {fileID: 991101653}
