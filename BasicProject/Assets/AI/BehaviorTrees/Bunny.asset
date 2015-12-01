@@ -51,7 +51,7 @@ MonoBehaviour:
       priority=&quot;&quot; name=&quot;until the end&quot; debugbreak=&quot;False&quot;
       constraint=&quot;&quot;&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;&quot;
       parameters=&quot;&quot; namespace=&quot;&quot; name=&quot;hug him&quot; debugbreak=&quot;False&quot;
-      classname=&quot;(global).&quot; /&gt;&lt;/constraint&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;sequencer
+      classname=&quot;&quot; /&gt;&lt;/constraint&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;far from action&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
       sensor=&quot;&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;hellephant&quot;
@@ -118,7 +118,7 @@ MonoBehaviour:
       priority=&quot;&quot; name=&quot;until the end&quot; debugbreak=&quot;False&quot;
       constraint=&quot;&quot;&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;&quot;
       parameters=&quot;&quot; namespace=&quot;&quot; name=&quot;hug him&quot; debugbreak=&quot;False&quot;
-      classname=&quot;(global).&quot; /&gt;&lt;/constraint&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;selector
+      classname=&quot;&quot; /&gt;&lt;/constraint&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;selector
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;should I start attack?&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;enough bunnies close?&quot;
@@ -149,7 +149,7 @@ MonoBehaviour:
       priority=&quot;&quot; name=&quot;until the end&quot; debugbreak=&quot;False&quot;
       constraint=&quot;&quot;&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;&quot;
       parameters=&quot;&quot; namespace=&quot;&quot; name=&quot;hug him&quot; debugbreak=&quot;False&quot;
-      classname=&quot;(global).&quot; /&gt;&lt;/constraint&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
+      classname=&quot;&quot; /&gt;&lt;/constraint&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;not enough bunnies
       close?&quot; debugbreak=&quot;False&quot; constraint=&quot;&quot;&gt;&lt;move
       turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;run to close bunnies
@@ -179,8 +179,8 @@ MonoBehaviour:
       closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;I'm happy to see you&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
-      sensor=&quot;&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;bunny
-      close to smell chocolat&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;&quot;
+      sensor=&quot;&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;another
+      bunny close to smell chocolat&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
       aspectobjectvariable=&quot;&quot; aspect=&quot;&quot; /&gt;&lt;move turnspeed=&quot;&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;get closer&quot; movetarget=&quot;&quot;
@@ -214,7 +214,7 @@ MonoBehaviour:
       name=&quot;until full&quot; debugbreak=&quot;False&quot; constraint=&quot;&quot;&gt;&lt;action
       repeatuntil=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot;
       namespace=&quot;&quot; name=&quot;eat it&quot; debugbreak=&quot;False&quot;
-      classname=&quot;(global).&quot; /&gt;&lt;/constraint&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;sequencer
+      classname=&quot;&quot; /&gt;&lt;/constraint&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;stay away&quot; debugbreak=&quot;False&quot;&gt;&lt;detect sensor=&quot;&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;hellephant&quot; matchtype=&quot;best&quot;
