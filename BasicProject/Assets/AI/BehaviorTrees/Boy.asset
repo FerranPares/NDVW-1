@@ -14,14 +14,92 @@ MonoBehaviour:
   _dataSerializer:
     _serializedData: <scriptableobject version="1.3" type="RAIN.BehaviorTrees.BTAsset"><fields><field
       value="&lt;behaviortree version=&quot;1.1&quot; repeatuntil=&quot;&quot; name=&quot;Boy&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;selector usepriorities=&quot;False&quot;
-      repeatuntil=&quot;&quot; name=&quot;root&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;I see dead bunnies&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
-      sensor=&quot;&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;is
-      that a nightmare?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
+      repeatuntil=&quot;&quot; name=&quot;root&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
+      sensor=&quot;&amp;quot;eye&amp;quot;&quot; repeatuntil=&quot;running&quot; name=&quot;is
+      that a nightmare?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;evilPerson&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
-      aspectobjectvariable=&quot;&quot; aspect=&quot;&quot; /&gt;&lt;action repeatuntil=&quot;&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;evil&amp;quot;&quot;
+      /&gt;&lt;constraint repeatuntil=&quot;&quot; name=&quot;no nightmare at sight&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;evilPerson == null&quot;&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
+      name=&quot;listen&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
+      sensor=&quot;&amp;quot;ear&amp;quot;&quot; repeatuntil=&quot;running&quot; name=&quot;hear
+      anything?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;shooter&quot;
+      debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;shoot&amp;quot;&quot;
+      /&gt;&lt;constraint repeatuntil=&quot;&quot; name=&quot;a peacefull night&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;shooter == null&quot;&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
+      name=&quot;smell?&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
+      sensor=&quot;&amp;quot;nose&amp;quot;&quot; repeatuntil=&quot;running&quot;
+      name=&quot;egg close?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;choco&quot;
+      debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;chocolate&amp;quot;&quot;
+      /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      name=&quot;egg!!&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;hungry?&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;&quot;&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      name=&quot;close to eat?&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;too far to eat&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;&quot;&gt;&lt;move turnspeed=&quot;&quot;
+      repeatuntil=&quot;&quot; name=&quot;go for it!&quot; movetarget=&quot;&quot;
+      movespeed=&quot;&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
+      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;close enough&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;&quot;&gt;&lt;action repeatuntil=&quot;&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
+      name=&quot;lick it&quot; debugbreak=&quot;False&quot; classname=&quot;&quot;
+      /&gt;&lt;audio waituntildone=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;lick&quot;
+      forcestoponexit=&quot;False&quot; delay=&quot;0&quot; debugbreak=&quot;False&quot;
+      audiosource=&quot;&quot; /&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sweet dreams&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;anybody around?&quot;
+      fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;detect sensor=&quot;&amp;quot;nose&amp;quot;&quot;
+      repeatuntil=&quot;success&quot; name=&quot;smell pee&quot; matchtype=&quot;best&quot;
+      entityobjectvariable=&quot;&quot; debugbreak=&quot;False&quot; consistent=&quot;True&quot;
+      aspectvariable=&quot;peeLocation&quot; aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;pee&amp;quot;&quot;
+      /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      name=&quot;sleepwalking&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
+      priority=&quot;&quot; parametervalues=&quot;NQB0cnVlAHdhbmRlclRhcmdldA==&quot;
+      parameters=&quot;V2FuZGVyRGlzdGFuY2UAU3RheU9uR3JhcGgAV2FuZGVyVGFyZ2V0VmFyaWFibGU=&quot;
+      namespace=&quot;(global)&quot; name=&quot;Choose Wander Position&quot; debugbreak=&quot;False&quot;
+      classname=&quot;ChooseWanderPosition&quot; /&gt;&lt;move turnspeed=&quot;&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;move&quot; movetarget=&quot;wanderTarget&quot;
+      movespeed=&quot;2&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
+      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;timer
+      waitforsec=&quot;random(1,3)&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;pause&quot; debugbreak=&quot;False&quot; /&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;move away if pee is smelled&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;expression&quot; expression=&quot;peeLocation != null&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;move away&quot; debugbreak=&quot;False&quot;&gt;&lt;action
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; parametervalues=&quot;OABwZWVMb2NhdGlvbgB0cnVlAGZsZWVUYXJnZXQ=&quot;
+      parameters=&quot;RmxlZURpc3RhbmNlAEZsZWVGcm9tAFN0YXlPbkdyYXBoAEZsZWVUYXJnZXRWYXJpYWJsZQ==&quot;
+      namespace=&quot;(global)&quot; name=&quot;Choose Flee Position&quot; debugbreak=&quot;False&quot;
+      classname=&quot;ChooseFleePosition&quot; /&gt;&lt;move turnspeed=&quot;&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;move&quot; movetarget=&quot;fleeTarget&quot;
+      movespeed=&quot;5&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
+      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;timer
+      waitforsec=&quot;random(1,5)&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;stop and check if it still smells&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;it sounds
+      like someone is shooting&quot; debugbreak=&quot;False&quot;&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;follow shooter&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;move
+      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;Follow&quot; movetarget=&quot;shooter&quot;
+      movespeed=&quot;2&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
+      closeenoughdistance=&quot;1.5&quot; closeenoughangle=&quot;&quot; /&gt;&lt;timer
+      waitforsec=&quot;random(3,5)&quot; returnvalue=&quot;success&quot; name=&quot;go
+      to him!&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;timer waitforsec=&quot;1&quot;
+      returnvalue=&quot;success&quot; priority=&quot;&quot; name=&quot;take a breath&quot;
+      debugbreak=&quot;False&quot; /&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;I see dead
+      bunnies&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
       name=&quot;shoot him!&quot; debugbreak=&quot;False&quot; classname=&quot;&quot;
       /&gt;&lt;audio waituntildone=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
@@ -37,66 +115,21 @@ MonoBehaviour:
       constraint=&quot;&quot;&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
       name=&quot;move away&quot; movetarget=&quot;&quot; movespeed=&quot;&quot; facetarget=&quot;&quot;
       debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot;
-      /&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;sequencer usepriorities=&quot;False&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;it sounds like someone
-      is shooting&quot; debugbreak=&quot;False&quot;&gt;&lt;detect sensor=&quot;&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;can I hear it?&quot;
-      matchtype=&quot;best&quot; entityobjectvariable=&quot;&quot; debugbreak=&quot;False&quot;
-      consistent=&quot;True&quot; aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot;
-      aspect=&quot;&quot; /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;let's go to the party&quot; movetarget=&quot;&quot;
-      movespeed=&quot;&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
-      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/sequencer&gt;&lt;sequencer
+      /&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;all&quot; repeatuntil=&quot;&quot; name=&quot;root&quot; fail=&quot;any&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;selector usepriorities=&quot;False&quot;
+      repeatuntil=&quot;running&quot; name=&quot;Patrol or Follow&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;personOfInterest ==
+      null (Patrol)&quot; debugbreak=&quot;True&quot; constraint=&quot;personOfInterest
+      == null&quot;&gt;&lt;waypointpatrol waypointsetvariable=&quot;&amp;quot;Patrol
+      Route&amp;quot;&quot; waypointactiontype=&quot;patrol&quot; traversetype=&quot;loop&quot;
+      traverseorder=&quot;forward&quot; repeatuntil=&quot;&quot; pathtargetvariable=&quot;&quot;
+      name=&quot;waypointpatrol&quot; movetargetvariable=&quot;moveTarget&quot; debugbreak=&quot;False&quot;&gt;&lt;move
+      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;move&quot; movetarget=&quot;moveTarget&quot;
+      movespeed=&quot;2&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
+      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/waypointpatrol&gt;&lt;/constraint&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;egg!!&quot; debugbreak=&quot;False&quot;&gt;&lt;detect sensor=&quot;&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;egg close?&quot; matchtype=&quot;best&quot;
-      entityobjectvariable=&quot;&quot; debugbreak=&quot;False&quot; consistent=&quot;True&quot;
-      aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot; aspect=&quot;&quot;
-      /&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;hungry?&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;&quot;&gt;&lt;selector usepriorities=&quot;False&quot;
-      repeatuntil=&quot;&quot; name=&quot;close to eat?&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;too far to eat&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;&quot;&gt;&lt;move turnspeed=&quot;&quot;
-      repeatuntil=&quot;&quot; name=&quot;go for it!&quot; movetarget=&quot;&quot;
-      movespeed=&quot;&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
-      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/constraint&gt;&lt;constraint
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;close enough&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;&quot;&gt;&lt;action repeatuntil=&quot;&quot;
-      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
-      name=&quot;lick it&quot; debugbreak=&quot;False&quot; classname=&quot;&quot;
-      /&gt;&lt;audio waituntildone=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;lick&quot;
-      forcestoponexit=&quot;False&quot; delay=&quot;0&quot; debugbreak=&quot;False&quot;
-      audiosource=&quot;&quot; /&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;/sequencer&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;sweet dreams&quot; debugbreak=&quot;False&quot;&gt;&lt;detect sensor=&quot;&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;no nightmares?&quot;
-      matchtype=&quot;best&quot; entityobjectvariable=&quot;&quot; debugbreak=&quot;False&quot;
-      consistent=&quot;True&quot; aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot;
-      aspect=&quot;&quot; /&gt;&lt;detect sensor=&quot;&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;no noise?&quot; matchtype=&quot;best&quot;
-      entityobjectvariable=&quot;&quot; debugbreak=&quot;False&quot; consistent=&quot;True&quot;
-      aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot; aspect=&quot;&quot;
-      /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;anybody around?&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;smell pee&quot; debugbreak=&quot;False&quot;&gt;&lt;detect sensor=&quot;&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;smell pee?&quot; matchtype=&quot;best&quot;
-      entityobjectvariable=&quot;&quot; debugbreak=&quot;False&quot; consistent=&quot;True&quot;
-      aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot; aspect=&quot;&quot;
-      /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;move away&quot; movetarget=&quot;&quot; movespeed=&quot;&quot; facetarget=&quot;&quot;
-      debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot;
-      /&gt;&lt;/sequencer&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;sleepwalking&quot; debugbreak=&quot;False&quot;&gt;&lt;random
-      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;how long&quot;
-      debugbreak=&quot;False&quot; /&gt;&lt;action repeatuntil=&quot;success&quot;
-      priority=&quot;&quot; parametervalues=&quot;MzAAdHJ1ZQB3YW5kZXJUYXJnZXQ=&quot;
-      parameters=&quot;V2FuZGVyRGlzdGFuY2UAU3RheU9uR3JhcGgAV2FuZGVyVGFyZ2V0VmFyaWFibGU=&quot;
-      namespace=&quot;(global)&quot; name=&quot;Choose Wander Position&quot; debugbreak=&quot;False&quot;
-      classname=&quot;ChooseWanderPosition&quot; /&gt;&lt;move turnspeed=&quot;&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;move&quot; movetarget=&quot;wanderTarget&quot;
-      movespeed=&quot;4&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
-      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/behaviortree&gt;"
+      name=&quot;Follow and Pause&quot; debugbreak=&quot;False&quot; /&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []
