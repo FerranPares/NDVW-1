@@ -204,8 +204,8 @@ MonoBehaviour:
       childrenvisible="True" /><field type="RAIN.Motion.BasicMotor" reference="3"
       id="_motor" /><field type="RAIN.Animation.BasicAnimator" reference="4" id="_animator"
       /><field type="RAIN.Navigation.BasicNavigator" reference="5" id="_navigator"
-      /><field type="RAIN.Perception.BasicSenses" reference="6" id="_senses" /><field
-      type="System.Collections.Generic.List" id="_customElements" elementtype="RAIN.Core.CustomAIElement"
+      /><field type="RAIN.Perception.BasicSenses" reference="6" id="_senses" childrenvisible="False"
+      /><field type="System.Collections.Generic.List" id="_customElements" elementtype="RAIN.Core.CustomAIElement"
       /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
       type="System.Collections.Generic.List" id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"
       /></reference><reference type="RAIN.Minds.BasicMind" refcount="1" id="2"><field
@@ -530,51 +530,40 @@ MonoBehaviour:
       refcount="1" id="0"><field value="Player" type="System.String" id="_entityName"
       /><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_form" gameobject="0" /><field type="System.Collections.Generic.List" id="_aspects"
-      elementtype="RAIN.Entities.Aspects.RAINAspect"><field type="RAIN.Entities.Aspects.AudioAspect"
-      reference="1" id="element0" /><field type="RAIN.Entities.Aspects.VisualAspect"
-      reference="2" id="element1" /><field type="RAIN.Entities.Aspects.AudioAspect"
-      reference="3" id="element2" /><field type="RAIN.Entities.Aspects.VisualAspect"
-      reference="4" id="element3" /></field></reference><reference type="RAIN.Entities.Aspects.AudioAspect"
+      elementtype="RAIN.Entities.Aspects.RAINAspect"><field type="RAIN.Entities.Aspects.VisualAspect"
+      reference="2" id="element0" /><field type="RAIN.Entities.Aspects.VisualAspect"
+      reference="4" id="element1" /><field type="RAIN.Entities.Aspects.VisualAspect"
+      reference="1" id="element2" /></field></reference><reference type="RAIN.Entities.Aspects.VisualAspect"
       refcount="1" id="1"><field value="True" type="System.Boolean" id="_showVisual"
-      /><field value="aboy" type="System.String" id="_aspectName" /><field value="True"
-      type="System.Boolean" id="_isActive" /><field value="0.6,0,0.6,1" type="UnityEngine.Color"
-      id="_aspectColor" /><field value="-0.5" type="System.Single" id="_outlineColorOffset"
-      /><field value="0.4" type="System.Single" id="_selectionColorOffset" /><field
-      value="1" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
-      id="_mountPoint" gameobject="1" /><field value="0,0.5,0" type="UnityEngine.Vector3"
-      id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
-      /><field type="UnityEngine.AudioSource" id="_audioSource" gameobject="-1" /></reference><reference
-      type="RAIN.Entities.Aspects.VisualAspect" refcount="1" id="2"><field value="True"
-      type="System.Boolean" id="_showVisual" /><field value="vboy" type="System.String"
-      id="_aspectName" /><field value="True" type="System.Boolean" id="_isActive"
-      /><field value="0.6,0.6,0.6,1" type="UnityEngine.Color" id="_aspectColor" /><field
-      value="-0.5" type="System.Single" id="_outlineColorOffset" /><field value="0.4"
-      type="System.Single" id="_selectionColorOffset" /><field value="1" type="System.Single"
-      id="_visualSize" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="2"
-      /><field value="0,0.5,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
-      value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /></reference><reference
-      type="RAIN.Entities.Aspects.AudioAspect" refcount="1" id="3"><field value="True"
-      type="System.Boolean" id="_showVisual" /><field value="aplayer" type="System.String"
-      id="_aspectName" /><field value="True" type="System.Boolean" id="_isActive"
-      /><field value="0,0,0.6,1" type="UnityEngine.Color" id="_aspectColor" /><field
-      value="-0.5" type="System.Single" id="_outlineColorOffset" /><field value="0.4"
-      type="System.Single" id="_selectionColorOffset" /><field value="1" type="System.Single"
-      id="_visualSize" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="3"
-      /><field value="0,0.5,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
-      value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field type="UnityEngine.AudioSource"
-      id="_audioSource" gameobject="-1" /></reference><reference type="RAIN.Entities.Aspects.VisualAspect"
-      refcount="1" id="4"><field value="True" type="System.Boolean" id="_showVisual"
-      /><field value="vplayer" type="System.String" id="_aspectName" /><field value="True"
+      /><field value="chocolate" type="System.String" id="_aspectName" /><field value="True"
       type="System.Boolean" id="_isActive" /><field value="0.6,0,0,1" type="UnityEngine.Color"
       id="_aspectColor" /><field value="-0.5" type="System.Single" id="_outlineColorOffset"
       /><field value="0.4" type="System.Single" id="_selectionColorOffset" /><field
       value="1" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
-      id="_mountPoint" gameobject="4" /><field value="0,0.5,0" type="UnityEngine.Vector3"
+      id="_mountPoint" gameobject="3" /><field value="0,0.5,0" type="UnityEngine.Vector3"
+      id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
+      /></reference><reference type="RAIN.Entities.Aspects.VisualAspect" refcount="1"
+      id="2"><field value="True" type="System.Boolean" id="_showVisual" /><field value="vboy"
+      type="System.String" id="_aspectName" /><field value="True" type="System.Boolean"
+      id="_isActive" /><field value="0.6,0.6,0.6,1" type="UnityEngine.Color" id="_aspectColor"
+      /><field value="-0.5" type="System.Single" id="_outlineColorOffset" /><field
+      value="0.4" type="System.Single" id="_selectionColorOffset" /><field value="1"
+      type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
+      id="_mountPoint" gameobject="1" /><field value="0,0.5,0" type="UnityEngine.Vector3"
+      id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
+      /></reference><reference type="RAIN.Entities.Aspects.AudioAspect" refcount="0"
+      id="3" /><reference type="RAIN.Entities.Aspects.VisualAspect" refcount="1" id="4"><field
+      value="True" type="System.Boolean" id="_showVisual" /><field value="vplayer"
+      type="System.String" id="_aspectName" /><field value="True" type="System.Boolean"
+      id="_isActive" /><field value="0.6,0,0,1" type="UnityEngine.Color" id="_aspectColor"
+      /><field value="-0.5" type="System.Single" id="_outlineColorOffset" /><field
+      value="0.4" type="System.Single" id="_selectionColorOffset" /><field value="1"
+      type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
+      id="_mountPoint" gameobject="2" /><field value="0,0.5,0" type="UnityEngine.Vector3"
       id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
       /></reference></references></component>
     _serializedGameObjects:
     - {fileID: 669469139}
-    - {fileID: 669469140}
     - {fileID: 669469140}
     - {fileID: 669469140}
     - {fileID: 669469140}
@@ -1218,10 +1207,8 @@ MonoBehaviour:
       /><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_form" gameobject="0" /><field type="System.Collections.Generic.List" id="_aspects"
       elementtype="RAIN.Entities.Aspects.RAINAspect"><field type="RAIN.Entities.Aspects.VisualAspect"
-      reference="1" id="element0" /><field type="RAIN.Entities.Aspects.AudioAspect"
-      reference="2" id="element1" /><field type="RAIN.Entities.Aspects.AudioAspect"
-      reference="3" id="element2" /><field type="RAIN.Entities.Aspects.VisualAspect"
-      reference="4" id="element3" /></field></reference><reference type="RAIN.Entities.Aspects.VisualAspect"
+      reference="1" id="element0" /><field type="RAIN.Entities.Aspects.VisualAspect"
+      reference="4" id="element1" /></field></reference><reference type="RAIN.Entities.Aspects.VisualAspect"
       refcount="1" id="1"><field value="True" type="System.Boolean" id="_showVisual"
       /><field value="vbunny" type="System.String" id="_aspectName" /><field value="True"
       type="System.Boolean" id="_isActive" /><field value="1,0.08088237,0.08088237,1"
@@ -1230,41 +1217,22 @@ MonoBehaviour:
       /><field value="1" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
       id="_mountPoint" gameobject="1" /><field value="0,0.5,0" type="UnityEngine.Vector3"
       id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
-      /></reference><reference type="RAIN.Entities.Aspects.AudioAspect" refcount="1"
-      id="2"><field value="True" type="System.Boolean" id="_showVisual" /><field value="abunny"
-      type="System.String" id="_aspectName" /><field value="True" type="System.Boolean"
-      id="_isActive" /><field value="0,0,0.6,1" type="UnityEngine.Color" id="_aspectColor"
-      /><field value="-0.5" type="System.Single" id="_outlineColorOffset" /><field
-      value="0.4" type="System.Single" id="_selectionColorOffset" /><field value="1"
-      type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
-      id="_mountPoint" gameobject="2" /><field value="0,0.5,0" type="UnityEngine.Vector3"
-      id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
-      /><field type="UnityEngine.AudioSource" id="_audioSource" gameobject="-1" /></reference><reference
-      type="RAIN.Entities.Aspects.AudioAspect" refcount="1" id="3"><field value="True"
-      type="System.Boolean" id="_showVisual" /><field value="aevil" type="System.String"
+      /></reference><reference type="RAIN.Entities.Aspects.AudioAspect" refcount="0"
+      id="2" /><reference type="RAIN.Entities.Aspects.AudioAspect" refcount="0" id="3"
+      /><reference type="RAIN.Entities.Aspects.VisualAspect" refcount="1" id="4"><field
+      value="True" type="System.Boolean" id="_showVisual" /><field value="vevil" type="System.String"
       id="_aspectName" /><field value="True" type="System.Boolean" id="_isActive"
-      /><field value="0.6,0,0.6,1" type="UnityEngine.Color" id="_aspectColor" /><field
+      /><field value="0,0.6,0,1" type="UnityEngine.Color" id="_aspectColor" /><field
       value="-0.5" type="System.Single" id="_outlineColorOffset" /><field value="0.4"
       type="System.Single" id="_selectionColorOffset" /><field value="1" type="System.Single"
-      id="_visualSize" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="3"
+      id="_visualSize" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="2"
       /><field value="0,0.5,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
-      value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field type="UnityEngine.AudioSource"
-      id="_audioSource" gameobject="-1" /></reference><reference type="RAIN.Entities.Aspects.VisualAspect"
-      refcount="1" id="4"><field value="True" type="System.Boolean" id="_showVisual"
-      /><field value="vevil" type="System.String" id="_aspectName" /><field value="True"
-      type="System.Boolean" id="_isActive" /><field value="0,0.6,0,1" type="UnityEngine.Color"
-      id="_aspectColor" /><field value="-0.5" type="System.Single" id="_outlineColorOffset"
-      /><field value="0.4" type="System.Single" id="_selectionColorOffset" /><field
-      value="1" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
-      id="_mountPoint" gameobject="4" /><field value="0,0.5,0" type="UnityEngine.Vector3"
-      id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
-      /></reference></references></component>
+      value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /></reference></references></component>
     _serializedGameObjects:
     - {fileID: 991101652}
     - {fileID: 991101653}
     - {fileID: 991101653}
-    - {fileID: 991101653}
-    - {fileID: 991101653}
+    - {fileID: 0}
     _serializedCustomData: []
 --- !u!1001 &1494960858
 Prefab:
@@ -1352,6 +1320,76 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!82 &1494960863
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1494960860}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: fa7f046ce321d4021b5e753bf1152916, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1495485221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,54 +1437,33 @@ MonoBehaviour:
       refcount="1" id="0"><field value="Hellephant" type="System.String" id="_entityName"
       /><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_form" gameobject="0" /><field type="System.Collections.Generic.List" id="_aspects"
-      elementtype="RAIN.Entities.Aspects.RAINAspect"><field type="RAIN.Entities.Aspects.AudioAspect"
-      reference="1" id="element0" /><field type="RAIN.Entities.Aspects.VisualAspect"
-      reference="2" id="element1" /><field type="RAIN.Entities.Aspects.AudioAspect"
-      reference="3" id="element2" /><field type="RAIN.Entities.Aspects.VisualAspect"
-      reference="4" id="element3" /></field></reference><reference type="RAIN.Entities.Aspects.AudioAspect"
-      refcount="1" id="1"><field value="True" type="System.Boolean" id="_showVisual"
-      /><field value="ahe" type="System.String" id="_aspectName" /><field value="True"
-      type="System.Boolean" id="_isActive" /><field value="0.6,0.6,0.6,1" type="UnityEngine.Color"
-      id="_aspectColor" /><field value="-0.5" type="System.Single" id="_outlineColorOffset"
-      /><field value="0.4" type="System.Single" id="_selectionColorOffset" /><field
-      value="3" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
-      id="_mountPoint" gameobject="1" /><field value="0,1.5,0" type="UnityEngine.Vector3"
-      id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
-      /><field type="UnityEngine.AudioSource" id="_audioSource" gameobject="-1" /></reference><reference
-      type="RAIN.Entities.Aspects.VisualAspect" refcount="1" id="2"><field value="True"
-      type="System.Boolean" id="_showVisual" /><field value="vhe" type="System.String"
-      id="_aspectName" /><field value="True" type="System.Boolean" id="_isActive"
-      /><field value="0.6,0,0,1" type="UnityEngine.Color" id="_aspectColor" /><field
-      value="-0.5" type="System.Single" id="_outlineColorOffset" /><field value="0.4"
-      type="System.Single" id="_selectionColorOffset" /><field value="3" type="System.Single"
-      id="_visualSize" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="2"
-      /><field value="0,1.5,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
-      value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /></reference><reference
-      type="RAIN.Entities.Aspects.AudioAspect" refcount="1" id="3"><field value="True"
-      type="System.Boolean" id="_showVisual" /><field value="aevil" type="System.String"
-      id="_aspectName" /><field value="True" type="System.Boolean" id="_isActive"
-      /><field value="0.6,0.5529412,0.009411765,1" type="UnityEngine.Color" id="_aspectColor"
+      elementtype="RAIN.Entities.Aspects.RAINAspect"><field type="RAIN.Entities.Aspects.VisualAspect"
+      reference="2" id="element0" /><field type="RAIN.Entities.Aspects.VisualAspect"
+      reference="4" id="element1" /></field></reference><reference type="RAIN.Entities.Aspects.AudioAspect"
+      refcount="0" id="1" /><reference type="RAIN.Entities.Aspects.VisualAspect" refcount="1"
+      id="2"><field value="True" type="System.Boolean" id="_showVisual" /><field value="vhe"
+      type="System.String" id="_aspectName" /><field value="True" type="System.Boolean"
+      id="_isActive" /><field value="0.6,0,0,1" type="UnityEngine.Color" id="_aspectColor"
       /><field value="-0.5" type="System.Single" id="_outlineColorOffset" /><field
       value="0.4" type="System.Single" id="_selectionColorOffset" /><field value="3"
       type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
-      id="_mountPoint" gameobject="3" /><field value="0,1.5,0" type="UnityEngine.Vector3"
+      id="_mountPoint" gameobject="1" /><field value="0,1.5,0" type="UnityEngine.Vector3"
       id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
-      /><field type="UnityEngine.AudioSource" id="_audioSource" gameobject="-1" /></reference><reference
-      type="RAIN.Entities.Aspects.VisualAspect" refcount="1" id="4"><field value="True"
-      type="System.Boolean" id="_showVisual" /><field value="vevil" type="System.String"
+      /></reference><reference type="RAIN.Entities.Aspects.AudioAspect" refcount="0"
+      id="3" /><reference type="RAIN.Entities.Aspects.VisualAspect" refcount="1" id="4"><field
+      value="True" type="System.Boolean" id="_showVisual" /><field value="vevil" type="System.String"
       id="_aspectName" /><field value="True" type="System.Boolean" id="_isActive"
       /><field value="0.6,0.6,0.6,1" type="UnityEngine.Color" id="_aspectColor" /><field
       value="-0.5" type="System.Single" id="_outlineColorOffset" /><field value="0.4"
       type="System.Single" id="_selectionColorOffset" /><field value="3" type="System.Single"
-      id="_visualSize" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="4"
+      id="_visualSize" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="2"
       /><field value="0,1.5,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
       value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /></reference></references></component>
     _serializedGameObjects:
     - {fileID: 2044559609}
     - {fileID: 2044559611}
     - {fileID: 2044559611}
-    - {fileID: 2044559611}
-    - {fileID: 2044559611}
+    - {fileID: 0}
     _serializedCustomData: []
 --- !u!1 &1555051796
 GameObject:
@@ -1495,54 +1512,44 @@ MonoBehaviour:
       refcount="1" id="0"><field value="Boy" type="System.String" id="_entityName"
       /><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_form" gameobject="0" /><field type="System.Collections.Generic.List" id="_aspects"
-      elementtype="RAIN.Entities.Aspects.RAINAspect"><field type="RAIN.Entities.Aspects.AudioAspect"
-      reference="1" id="element0" /><field type="RAIN.Entities.Aspects.VisualAspect"
-      reference="2" id="element1" /><field type="RAIN.Entities.Aspects.AudioAspect"
-      reference="3" id="element2" /><field type="RAIN.Entities.Aspects.AudioAspect"
-      reference="4" id="element3" /></field></reference><reference type="RAIN.Entities.Aspects.AudioAspect"
+      elementtype="RAIN.Entities.Aspects.RAINAspect"><field type="RAIN.Entities.Aspects.VisualAspect"
+      reference="2" id="element0" /><field type="RAIN.Entities.Aspects.AudioAspect"
+      reference="4" id="element1" /><field type="RAIN.Entities.Aspects.VisualAspect"
+      reference="1" id="element2" /></field></reference><reference type="RAIN.Entities.Aspects.VisualAspect"
       refcount="1" id="1"><field value="True" type="System.Boolean" id="_showVisual"
-      /><field value="aboy" type="System.String" id="_aspectName" /><field value="True"
-      type="System.Boolean" id="_isActive" /><field value="0,0,0.6,1" type="UnityEngine.Color"
+      /><field value="pee" type="System.String" id="_aspectName" /><field value="True"
+      type="System.Boolean" id="_isActive" /><field value="0,0.6,0,1" type="UnityEngine.Color"
       id="_aspectColor" /><field value="-0.5" type="System.Single" id="_outlineColorOffset"
       /><field value="0.4" type="System.Single" id="_selectionColorOffset" /><field
-      value="1" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
+      value="0.1" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
+      id="_mountPoint" gameobject="3" /><field value="0,0,0" type="UnityEngine.Vector3"
+      id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
+      /></reference><reference type="RAIN.Entities.Aspects.VisualAspect" refcount="1"
+      id="2"><field value="True" type="System.Boolean" id="_showVisual" /><field value="vboy"
+      type="System.String" id="_aspectName" /><field value="True" type="System.Boolean"
+      id="_isActive" /><field value="0,0,0.6,1" type="UnityEngine.Color" id="_aspectColor"
+      /><field value="-0.5" type="System.Single" id="_outlineColorOffset" /><field
+      value="0.4" type="System.Single" id="_selectionColorOffset" /><field value="1"
+      type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
       id="_mountPoint" gameobject="1" /><field value="0,0.5,0" type="UnityEngine.Vector3"
       id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
-      /><field type="UnityEngine.AudioSource" id="_audioSource" gameobject="-1" /></reference><reference
-      type="RAIN.Entities.Aspects.VisualAspect" refcount="1" id="2"><field value="True"
-      type="System.Boolean" id="_showVisual" /><field value="vboy" type="System.String"
+      /></reference><reference type="RAIN.Entities.Aspects.AudioAspect" refcount="0"
+      id="3" /><reference type="RAIN.Entities.Aspects.AudioAspect" refcount="1" id="4"><field
+      value="True" type="System.Boolean" id="_showVisual" /><field value="shoot" type="System.String"
       id="_aspectName" /><field value="True" type="System.Boolean" id="_isActive"
-      /><field value="0,0,0.6,1" type="UnityEngine.Color" id="_aspectColor" /><field
-      value="-0.5" type="System.Single" id="_outlineColorOffset" /><field value="0.4"
-      type="System.Single" id="_selectionColorOffset" /><field value="1" type="System.Single"
-      id="_visualSize" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="2"
-      /><field value="0,0.5,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
-      value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /></reference><reference
-      type="RAIN.Entities.Aspects.AudioAspect" refcount="1" id="3"><field value="True"
-      type="System.Boolean" id="_showVisual" /><field value="pee" type="System.String"
-      id="_aspectName" /><field value="True" type="System.Boolean" id="_isActive"
-      /><field value="0.6,0.6,0.6,1" type="UnityEngine.Color" id="_aspectColor" /><field
-      value="-0.5" type="System.Single" id="_outlineColorOffset" /><field value="0.4"
-      type="System.Single" id="_selectionColorOffset" /><field value="1" type="System.Single"
-      id="_visualSize" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="3"
-      /><field value="0,0.5,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
-      value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field type="UnityEngine.AudioSource"
-      id="_audioSource" gameobject="-1" /></reference><reference type="RAIN.Entities.Aspects.AudioAspect"
-      refcount="1" id="4"><field value="True" type="System.Boolean" id="_showVisual"
-      /><field value="shoot" type="System.String" id="_aspectName" /><field value="True"
-      type="System.Boolean" id="_isActive" /><field value="0.6,0.5529412,0.009411765,1"
-      type="UnityEngine.Color" id="_aspectColor" /><field value="-0.5" type="System.Single"
-      id="_outlineColorOffset" /><field value="0.4" type="System.Single" id="_selectionColorOffset"
-      /><field value="1" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
-      id="_mountPoint" gameobject="4" /><field value="0,0.5,0" type="UnityEngine.Vector3"
+      /><field value="0.6,0.5529412,0.009411765,1" type="UnityEngine.Color" id="_aspectColor"
+      /><field value="-0.5" type="System.Single" id="_outlineColorOffset" /><field
+      value="0.4" type="System.Single" id="_selectionColorOffset" /><field value="1"
+      type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
+      id="_mountPoint" gameobject="2" /><field value="0,0.5,0" type="UnityEngine.Vector3"
       id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
-      /><field type="UnityEngine.AudioSource" id="_audioSource" gameobject="-1" /></reference></references></component>
+      /><field type="UnityEngine.AudioSource" id="_audioSource" gameobject="4" /></reference></references></component>
     _serializedGameObjects:
     - {fileID: 1494960860}
     - {fileID: 1494960859}
     - {fileID: 1494960859}
     - {fileID: 1494960859}
-    - {fileID: 1494960859}
+    - {fileID: 1494960863}
     _serializedCustomData: []
 --- !u!1001 &1616480650
 Prefab:

@@ -17,7 +17,7 @@ MonoBehaviour:
       debugbreak=&quot;False&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
       repeatuntil=&quot;&quot; name=&quot;root&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
       sensor=&quot;&amp;quot;eye&amp;quot;&quot; repeatuntil=&quot;running&quot; name=&quot;not
-      so many friends around&quot; matchtype=&quot;all&quot; entityobjectvariable=&quot;evilPerson&quot;
+      so many friends around&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;evilPerson&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
       aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;vevil&amp;quot;&quot;
       /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
