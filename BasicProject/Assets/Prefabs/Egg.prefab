@@ -1830,7 +1830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de5d364a3e2bccd4a96b3d2046b2945d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boy: {fileID: 170450, guid: 952b0f96a8d4a2a48878776810f1fec4, type: 2}
+  boy: {fileID: 142514, guid: 952b0f96a8d4a2a48878776810f1fec4, type: 2}
   peopleVel: 2
   bunnyVel: .100000001
   hellephantVel: 1
@@ -1875,6 +1875,10 @@ Prefab:
         id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
         /></reference></references></component>
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: boy
+      value: 
+      objectReference: {fileID: 142514, guid: 952b0f96a8d4a2a48878776810f1fec4, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 127502}

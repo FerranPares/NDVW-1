@@ -5,17 +5,19 @@ using RAIN.Core;
 public class HPController : MonoBehaviour {
 
 	private int _hitPoints;
-	private AIRig tRig;
+	private AIRig _tRig;
+	private GameObject _actualAttacker;
 	// Use this for initialization
 	void Start () {
 //		ai = this.gameObject.GetComponent<RAIN.Core.AIRig> ();
 //		_hitPoints = (int)ai.AI.WorkingMemory.GetItem("hitPoints");
 //		Debug.Log (this.gameObject.name + " hit points are " + _hitPoints.toString());
 		_hitPoints = 135;
+		_actualAttacker = null;
 
-		tRig = gameObject.GetComponentInChildren<AIRig>();
-		if (tRig != null)
-			tRig.AI.WorkingMemory.SetItem<int>("hitPoints", _hitPoints);
+		_tRig = gameObject.GetComponentInChildren<AIRig>();
+		if (_tRig != null)
+			_tRig.AI.WorkingMemory.SetItem<int>("hitPoints", _hitPoints);
 //		if (tag == "Hellephant") {
 //			hitPoints = 200;
 //		} else if (tag == "Bunny") {
@@ -30,10 +32,19 @@ public class HPController : MonoBehaviour {
 		}
 	}
 
-	public void damage(){
+	public void damage(GameObject attacker){
+//		if (_tRig != null) {
+//			if (_actualAttacker == null){
+//				_actualAttacker = attacker;
+//				_tRig.AI.WorkingMemory.SetItem<int> ("attacker", _actualAttacker);
+//			}
+//		}
 		_hitPoints = _hitPoints - 10;
-		if (tRig != null)
-			tRig.AI.WorkingMemory.SetItem<int>("hitPoints", _hitPoints);
+		_actualAttacker = attacker;
+		if (_tRig != null) {
+			_tRig.AI.WorkingMemory.SetItem<int> ("hitPoints", _hitPoints);
+			_tRig.AI.WorkingMemory.SetItem<GameObject> ("attacker", _actualAttacker);
+		}
 		Debug.Log ("DAMAGED! HP=" + _hitPoints.ToString());
 	}
 }

@@ -26,7 +26,7 @@ public class ShootHim : RAINAction
 			return ActionResult.FAILURE;
 		}
 		_shootSource.Play();
-		hp.damage();
+		hp.damage(ai.Body);
 		return ActionResult.SUCCESS;
     }
 
