@@ -2,27 +2,21 @@
 
 public class EnemyManager : MonoBehaviour
 {
-    public PlayerHealth playerHealth;
-    public GameObject enemy;
+    public GameObject egg;
     public float spawnTime = 3f;
-    public Transform[] spawnPoints;
-
+	private Vector3 EggPosition;
 
     void Start ()
     {
         InvokeRepeating ("Spawn", spawnTime, spawnTime);
     }
 
-
     void Spawn ()
     {
-        if(playerHealth.currentHealth <= 0f)
-        {
-            return;
-        }
+		Vector3 position_offset = transform.position;
+		EggPosition.Set (Random.Range (-50, 50), 0, Random.Range (-50, 50));
+		Vector3 spawnPoint = position_offset + EggPosition;
 
-        int spawnPointIndex = Random.Range (0, spawnPoints.Length);
-
-        Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+		Instantiate(egg, spawnPoint, Quaternion.identity);
     }
 }
