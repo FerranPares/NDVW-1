@@ -4,29 +4,29 @@ using System.Collections.Generic;
 using RAIN.Action;
 using RAIN.Core;
 using RAIN.Representation;
-using RAIN.Entities; //custom
 
 [RAINAction]
 public class ShootHim : RAINAction
 {
-	EntityRig _tRig;
-	RAIN.Entities.Aspects.RAINAspect _shootAspect;
-	public Expression shootAudio = new Expression();
+	public Expression shootTarget = new Expression();
+	private GameObject _shootTarget;
+	private AudioSource _shootSource;
 
     public override void Start(RAIN.Core.AI ai)
     {
         base.Start(ai);
-		_tRig = ai.Body.GetComponentInChildren<EntityRig>();
-		_shootAspect = _tRig.Entity.GetAspect("shoot");
+		_shootTarget = (GameObject) shootTarget.Evaluate<GameObject> (ai.DeltaTime, ai.WorkingMemory);
+		_shootSource = ai.Body.GetComponent<AudioSource> ();
     }
 
     public override ActionResult Execute(RAIN.Core.AI ai)
 	{
-		if(!shootAudio.IsValid)
-		{
+		HPController hp = _shootTarget.GetComponent<HPController> ();
+		if(hp == null){
 			return ActionResult.FAILURE;
 		}
-		_shootAspect.IsActive = (bool) shootAudio.Evaluate<bool>(ai.DeltaTime, ai.WorkingMemory);
+		_shootSource.Play();
+		hp.damage();
 		return ActionResult.SUCCESS;
     }
 
