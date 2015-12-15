@@ -35,9 +35,9 @@ public class EggCollisioner : MonoBehaviour {
 			Debug.Log("Egg Health: " + hp.ToString() + ", Maximum hp reached!");
 			// Instantiate BoyBot and destroy egg
 
-			Vector3 spawnPoint = transform.position;	
-			Destroy(this.gameObject);
-			Instantiate(boy, spawnPoint, Quaternion.identity);
+//			Vector3 spawnPoint = transform.position;	
+//			Destroy(this.gameObject);
+//			Instantiate(boy, spawnPoint, Quaternion.identity);
 
 
 		}
