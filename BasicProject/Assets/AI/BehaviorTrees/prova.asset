@@ -19,7 +19,7 @@ MonoBehaviour:
       sensor=&quot;&amp;quot;eye&amp;quot;&quot; repeatuntil=&quot;running&quot; name=&quot;is
       that a nightmare?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;evilPerson&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
-      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;vplayer&amp;quot;&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;vevil&amp;quot;&quot;
       /&gt;&lt;detect sensor=&quot;&amp;quot;ear&amp;quot;&quot; repeatuntil=&quot;running&quot;
       name=&quot;hear anything?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;shooter&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
@@ -35,7 +35,7 @@ MonoBehaviour:
       /&gt;&lt;detect sensor=&quot;&amp;quot;nose&amp;quot;&quot; repeatuntil=&quot;running&quot;
       name=&quot;too close?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;evilClose&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
-      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;aevil&amp;quot;&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;vevil&amp;quot;&quot;
       /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot;
       name=&quot;selector&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;no nightmare at sight&quot; debugbreak=&quot;False&quot;
@@ -44,39 +44,30 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;a peacefull night&quot;
       debugbreak=&quot;False&quot; constraint=&quot;shooter == null&quot;&gt;&lt;selector
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;selector&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;eat?&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
-      returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;chocolate egg?&quot; expression=&quot;egg != null&quot; debugbreak=&quot;False&quot;
-      /&gt;&lt;expression returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;hungry?&quot; expression=&quot;hungry = true&quot;
-      debugbreak=&quot;False&quot; /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;go for it!&quot; movetarget=&quot;egg&quot;
-      movespeed=&quot;2&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;eat?&quot; debugbreak=&quot;False&quot; constraint=&quot;egg != null&quot;&gt;&lt;move
+      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;go for it!&quot;
+      movetarget=&quot;egg&quot; movespeed=&quot;2&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
       closeenoughdistance=&quot;0&quot; closeenoughangle=&quot;&quot; /&gt;&lt;audio
-      waituntildone=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;lick&quot; forcestoponexit=&quot;False&quot; delay=&quot;0&quot;
-      debugbreak=&quot;False&quot; audiosource=&quot;&quot; /&gt;&lt;timer waitforsec=&quot;random(1,3)&quot;
-      returnvalue=&quot;success&quot; priority=&quot;&quot; name=&quot;licking&quot;
-      debugbreak=&quot;False&quot; /&gt;&lt;action repeatuntil=&quot;&quot; priority=&quot;&quot;
+      waituntildone=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;lick&quot;
+      forcestoponexit=&quot;False&quot; delay=&quot;0&quot; debugbreak=&quot;False&quot;
+      audiosource=&quot;&quot; /&gt;&lt;timer waitforsec=&quot;random(1,3)&quot; returnvalue=&quot;success&quot;
+      name=&quot;licking&quot; debugbreak=&quot;False&quot; /&gt;&lt;action repeatuntil=&quot;&quot;
       parametervalues=&quot;AAAA&quot; parameters=&quot;RmxlZURpc3RhbmNlAEZsZWVGcm9tAFN0YXlPbkdyYXBoAEZsZWVUYXJnZXRWYXJpYWJsZQ==&quot;
       namespace=&quot;&quot; name=&quot;lick it&quot; debugbreak=&quot;False&quot;
-      classname=&quot;ChooseFleePosition&quot; /&gt;&lt;/sequencer&gt;&lt;selector
+      classname=&quot;ChooseFleePosition&quot; /&gt;&lt;/constraint&gt;&lt;selector
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;anybody around?&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;smell pee!!&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
-      returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;expression&quot; expression=&quot;peeLocation != null&quot; debugbreak=&quot;False&quot;
-      /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;move away&quot; debugbreak=&quot;False&quot;&gt;&lt;action
-      repeatuntil=&quot;success&quot; priority=&quot;&quot; parametervalues=&quot;NABwZWVMb2NhdGlvbgB0cnVlAGZsZWVUYXJnZXQ=&quot;
-      parameters=&quot;RmxlZURpc3RhbmNlAEZsZWVGcm9tAFN0YXlPbkdyYXBoAEZsZWVUYXJnZXRWYXJpYWJsZQ==&quot;
+      name=&quot;anybody around?&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;smell pee!!&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;peeLocation != null&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;move away&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot; priority=&quot;&quot;
+      parametervalues=&quot;NABwZWVMb2NhdGlvbgB0cnVlAGZsZWVUYXJnZXQ=&quot; parameters=&quot;RmxlZURpc3RhbmNlAEZsZWVGcm9tAFN0YXlPbkdyYXBoAEZsZWVUYXJnZXRWYXJpYWJsZQ==&quot;
       namespace=&quot;(global)&quot; name=&quot;Choose Flee Position&quot; debugbreak=&quot;False&quot;
       classname=&quot;ChooseFleePosition&quot; /&gt;&lt;move turnspeed=&quot;&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;move&quot; movetarget=&quot;fleeTarget&quot;
       movespeed=&quot;5&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
-      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/sequencer&gt;&lt;/sequencer&gt;&lt;sequencer
+      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;sleepwalking&quot; debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;success&quot;
       priority=&quot;&quot; parametervalues=&quot;NQB0cnVlAHdhbmRlclRhcmdldA==&quot;
@@ -100,16 +91,18 @@ MonoBehaviour:
       returnvalue=&quot;success&quot; priority=&quot;&quot; name=&quot;take a breath&quot;
       debugbreak=&quot;False&quot; /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;I see dead bunnies&quot; debugbreak=&quot;False&quot;&gt;&lt;selector
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;go to or away&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;muuumyyyy! (move away if is too close)&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
-      returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;expression&quot; expression=&quot;evilClose != null&quot; debugbreak=&quot;False&quot;
-      /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;move away&quot; debugbreak=&quot;False&quot;&gt;&lt;action
-      repeatuntil=&quot;success&quot; priority=&quot;&quot; parametervalues=&quot;NABldmlsQ2xvc2UAdHJ1ZQBmbGVlVGFyZ2V0&quot;
+      name=&quot;I see dead bunnies&quot; debugbreak=&quot;False&quot;&gt;&lt;audio
+      waituntildone=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;audio&quot; forcestoponexit=&quot;False&quot; delay=&quot;0&quot;
+      debugbreak=&quot;False&quot; audiosource=&quot;Boy&quot; /&gt;&lt;selector usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;go to or away&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;muuumyyyy! (move away
+      if is too close)&quot; debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;evaluate&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;expression&quot; expression=&quot;evilClose
+      != null&quot; debugbreak=&quot;False&quot; /&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;move away&quot; debugbreak=&quot;False&quot;&gt;&lt;action
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; parametervalues=&quot;MTAAZXZpbENsb3NlAHRydWUAZmxlZVRhcmdldA==&quot;
       parameters=&quot;RmxlZURpc3RhbmNlAEZsZWVGcm9tAFN0YXlPbkdyYXBoAEZsZWVUYXJnZXRWYXJpYWJsZQ==&quot;
       namespace=&quot;(global)&quot; name=&quot;Choose Flee Position&quot; debugbreak=&quot;False&quot;
       classname=&quot;ChooseFleePosition&quot; /&gt;&lt;move turnspeed=&quot;&quot;
