@@ -3,6 +3,8 @@ using System.Collections;
 
 public class EggCollisioner : MonoBehaviour {
 
+	public GameObject boy;
+
 	double hp;
 	int peopleEating;
 	int bunniesEting;
@@ -30,8 +32,14 @@ public class EggCollisioner : MonoBehaviour {
 
 		if(hp > 200.0)
 		{
-			// Debug.Log("Egg Health: " + hp.ToString() + ", Maximum hp reached!");
+			Debug.Log("Egg Health: " + hp.ToString() + ", Maximum hp reached!");
 			// Instantiate BoyBot and destroy egg
+
+			Vector3 spawnPoint = transform.position;	
+			Destroy(this.gameObject);
+			Instantiate(boy, spawnPoint, Quaternion.identity);
+
+
 		}
 	}
 
