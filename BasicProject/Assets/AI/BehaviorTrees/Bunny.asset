@@ -16,14 +16,10 @@ MonoBehaviour:
       value="&lt;behaviortree version=&quot;1.1&quot; repeatuntil=&quot;&quot; name=&quot;Bunny&quot;
       debugbreak=&quot;False&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
       repeatuntil=&quot;&quot; name=&quot;root&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
-      sensor=&quot;&amp;quot;ear&amp;quot;&quot; repeatuntil=&quot;running&quot; name=&quot;shouting
-      Purrrrrrrrrrrrrrrrrrrrrrffffffffffffffffffffffffff!!!?&quot; matchtype=&quot;best&quot;
-      entityobjectvariable=&quot;pur&quot; debugbreak=&quot;False&quot; consistent=&quot;True&quot;
-      aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;pur&amp;quot;&quot;
-      /&gt;&lt;detect sensor=&quot;&amp;quot;eye&amp;quot;&quot; repeatuntil=&quot;running&quot;
-      name=&quot;can I see shoter?&quot; matchtype=&quot;all&quot; entityobjectvariable=&quot;allBoys&quot;
+      sensor=&quot;&amp;quot;ear&amp;quot;&quot; repeatuntil=&quot;running&quot; name=&quot;Hellephant
+      under attack&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;pur&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
-      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;vboy&amp;quot;&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;pur&amp;quot;&quot;
       /&gt;&lt;constraint repeatuntil=&quot;&quot; name=&quot;remember hearing hellephant&quot;
       debugbreak=&quot;False&quot; constraint=&quot;pur != null&quot;&gt;&lt;expression
       returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;expression&quot;
@@ -40,6 +36,52 @@ MonoBehaviour:
       returnvalue=&quot;success&quot; priority=&quot;&quot; name=&quot;timer&quot;
       debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;evaluate&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;expression&quot; expression=&quot;pur
+      != null&quot; debugbreak=&quot;False&quot; /&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;detect
+      sensor=&quot;&amp;quot;eye&amp;quot;&quot; repeatuntil=&quot;running&quot; name=&quot;can
+      I see shoter?&quot; matchtype=&quot;all&quot; entityobjectvariable=&quot;allBoys&quot;
+      debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;vboy&amp;quot;&quot;
+      /&gt;&lt;detect sensor=&quot;&amp;quot;ear&amp;quot;&quot; repeatuntil=&quot;running&quot;
+      name=&quot;bunny under attacked&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;attacked&quot;
+      debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;attacked&amp;quot;&quot;
+      /&gt;&lt;constraint repeatuntil=&quot;&quot; name=&quot;remember bunny attacked&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;attacked != null&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;expression&quot;
+      expression=&quot;attackedBunny = attacked&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;timer waitforsec=&quot;5&quot; returnvalue=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;timer&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;expression&quot; expression=&quot;attackedBunny = null&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/sequencer&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;timer waitforsec=&quot;0.1&quot;
+      returnvalue=&quot;success&quot; priority=&quot;&quot; name=&quot;timer&quot;
+      debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;evaluate&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;expression&quot; expression=&quot;attacked
+      != null&quot; debugbreak=&quot;False&quot; /&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;detect
+      sensor=&quot;&amp;quot;ear&amp;quot;&quot; repeatuntil=&quot;running&quot; name=&quot;bunny
+      under attack&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;attack&quot;
+      debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;attack&amp;quot;&quot;
+      /&gt;&lt;constraint repeatuntil=&quot;&quot; name=&quot;remember bunny attacked&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;attack != null&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;expression&quot;
+      expression=&quot;attackBunny = attacked&quot; debugbreak=&quot;False&quot; /&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
+      name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;timer waitforsec=&quot;5&quot; returnvalue=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;timer&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;expression&quot; expression=&quot;attackBunny = null&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/sequencer&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;timer waitforsec=&quot;0.1&quot;
+      returnvalue=&quot;success&quot; priority=&quot;&quot; name=&quot;timer&quot;
+      debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;evaluate&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;expression&quot; expression=&quot;attack
       != null&quot; debugbreak=&quot;False&quot; /&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;selector
       usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot; name=&quot;selector&quot;
       debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
