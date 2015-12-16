@@ -20,7 +20,11 @@ MonoBehaviour:
       Purrrrrrrrrrrrrrrrrrrrrrffffffffffffffffffffffffff!!!?&quot; matchtype=&quot;best&quot;
       entityobjectvariable=&quot;pur&quot; debugbreak=&quot;False&quot; consistent=&quot;True&quot;
       aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;pur&amp;quot;&quot;
-      /&gt;&lt;constraint repeatuntil=&quot;&quot; name=&quot;remember hearing&quot;
+      /&gt;&lt;detect sensor=&quot;&amp;quot;eye&amp;quot;&quot; repeatuntil=&quot;running&quot;
+      name=&quot;can I see shoter?&quot; matchtype=&quot;all&quot; entityobjectvariable=&quot;allBoys&quot;
+      debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;vboy&amp;quot;&quot;
+      /&gt;&lt;constraint repeatuntil=&quot;&quot; name=&quot;remember hearing hellephant&quot;
       debugbreak=&quot;False&quot; constraint=&quot;pur != null&quot;&gt;&lt;expression
       returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;expression&quot;
       expression=&quot;hellephant = pur&quot; debugbreak=&quot;False&quot; /&gt;&lt;parallel
@@ -40,37 +44,34 @@ MonoBehaviour:
       usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot; name=&quot;selector&quot;
       debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;hellephan under attack&quot; debugbreak=&quot;False&quot; constraint=&quot;hellephant
-      != null&quot; /&gt;&lt;/selector&gt;&lt;sequencer usepriorities=&quot;False&quot;
-      repeatuntil=&quot;&quot; name=&quot;hellephan under attack&quot; debugbreak=&quot;False&quot;&gt;&lt;selector
+      != null&quot;&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;&quot;
+      parameters=&quot;&quot; namespace=&quot;(global)&quot; name=&quot;action&quot;
+      debugbreak=&quot;False&quot; classname=&quot;isIn&quot; /&gt;&lt;selector usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; name=&quot;how am I involved?&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;how am I involved?&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;close to shoteer&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
-      sensor=&quot;&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;can
-      I see shoter?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;&quot;
+      name=&quot;close to shoteer&quot; debugbreak=&quot;False&quot;&gt;&lt;audio
+      waituntildone=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;AAAARRRGHHHHH!!!&quot; forcestoponexit=&quot;False&quot; delay=&quot;0&quot;
+      debugbreak=&quot;False&quot; audiosource=&quot;&quot; /&gt;&lt;selector usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;where is he?&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;run to&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
+      sensor=&quot;&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;not
+      in range of hug&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
-      aspectobjectvariable=&quot;&quot; aspect=&quot;&quot; /&gt;&lt;audio waituntildone=&quot;False&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;AAAARRRGHHHHH!!!&quot;
-      forcestoponexit=&quot;False&quot; delay=&quot;0&quot; debugbreak=&quot;False&quot;
-      audiosource=&quot;&quot; /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;where is he?&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&quot; /&gt;&lt;move turnspeed=&quot;&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;run to him&quot; movetarget=&quot;&quot;
+      movespeed=&quot;&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
+      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/sequencer&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;run to&quot; debugbreak=&quot;False&quot;&gt;&lt;detect sensor=&quot;&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;not in range of hug&quot;
+      name=&quot;hug him&quot; debugbreak=&quot;False&quot;&gt;&lt;detect sensor=&quot;&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;in range of hug&quot;
       matchtype=&quot;best&quot; entityobjectvariable=&quot;&quot; debugbreak=&quot;False&quot;
       consistent=&quot;True&quot; aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot;
-      aspect=&quot;&quot; /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;run to him&quot; movetarget=&quot;&quot; movespeed=&quot;&quot;
-      facetarget=&quot;&quot; debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot;
-      closeenoughangle=&quot;&quot; /&gt;&lt;/sequencer&gt;&lt;sequencer usepriorities=&quot;False&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;hug him&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
-      sensor=&quot;&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;in
-      range of hug&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;&quot;
-      debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
-      aspectobjectvariable=&quot;&quot; aspect=&quot;&quot; /&gt;&lt;constraint repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;until the end&quot; debugbreak=&quot;False&quot;
-      constraint=&quot;&quot;&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;&quot;
-      parameters=&quot;&quot; namespace=&quot;&quot; name=&quot;hug him&quot; debugbreak=&quot;False&quot;
+      aspect=&quot;&quot; /&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;until the end&quot; debugbreak=&quot;False&quot; constraint=&quot;&quot;&gt;&lt;action
+      repeatuntil=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot;
+      namespace=&quot;&quot; name=&quot;hug him&quot; debugbreak=&quot;False&quot;
       classname=&quot;&quot; /&gt;&lt;/constraint&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;far from action&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
@@ -83,7 +84,7 @@ MonoBehaviour:
       aspectobjectvariable=&quot;&quot; aspect=&quot;&quot; /&gt;&lt;move turnspeed=&quot;&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;flock tight&quot;
       movetarget=&quot;&quot; movespeed=&quot;&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
-      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;sequencer
+      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;bunnies
       under attack&quot; debugbreak=&quot;False&quot;&gt;&lt;detect sensor=&quot;&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;shouting ai?&quot;
