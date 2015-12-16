@@ -1206,7 +1206,8 @@ Prefab:
         id="_aspects" elementtype="RAIN.Entities.Aspects.RAINAspect"><field type="RAIN.Entities.Aspects.VisualAspect"
         reference="1" id="element0" /><field type="RAIN.Entities.Aspects.VisualAspect"
         reference="4" id="element1" /><field type="RAIN.Entities.Aspects.AudioAspect"
-        reference="2" id="element2" /></field></reference><reference type="RAIN.Entities.Aspects.VisualAspect"
+        reference="2" id="element2" /><field type="RAIN.Entities.Aspects.AudioAspect"
+        reference="3" id="element3" /></field></reference><reference type="RAIN.Entities.Aspects.VisualAspect"
         refcount="1" id="1"><field value="True" type="System.Boolean" id="_showVisual"
         /><field value="vbunny" type="System.String" id="_aspectName" /><field value="True"
         type="System.Boolean" id="_isActive" /><field value="1,0.08088237,0.08088237,1"
@@ -1225,20 +1226,29 @@ Prefab:
         id="_mountPoint" gameobject="3" /><field value="0,0.5,0" type="UnityEngine.Vector3"
         id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
         /><field type="UnityEngine.AudioSource" id="_audioSource" gameobject="4" /></reference><reference
-        type="RAIN.Entities.Aspects.AudioAspect" refcount="0" id="3" /><reference
-        type="RAIN.Entities.Aspects.VisualAspect" refcount="1" id="4"><field value="True"
-        type="System.Boolean" id="_showVisual" /><field value="vevil" type="System.String"
+        type="RAIN.Entities.Aspects.AudioAspect" refcount="1" id="3"><field value="True"
+        type="System.Boolean" id="_showVisual" /><field value="attacked" type="System.String"
         id="_aspectName" /><field value="True" type="System.Boolean" id="_isActive"
-        /><field value="0,0.6,0,1" type="UnityEngine.Color" id="_aspectColor" /><field
+        /><field value="0,0,0.6,1" type="UnityEngine.Color" id="_aspectColor" /><field
         value="-0.5" type="System.Single" id="_outlineColorOffset" /><field value="0.4"
         type="System.Single" id="_selectionColorOffset" /><field value="1" type="System.Single"
-        id="_visualSize" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="2"
+        id="_visualSize" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="5"
         /><field value="0,0.5,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
-        value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /></reference></references></component>
+        value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field type="UnityEngine.AudioSource"
+        id="_audioSource" gameobject="6" /></reference><reference type="RAIN.Entities.Aspects.VisualAspect"
+        refcount="1" id="4"><field value="True" type="System.Boolean" id="_showVisual"
+        /><field value="vevil" type="System.String" id="_aspectName" /><field value="True"
+        type="System.Boolean" id="_isActive" /><field value="0,0.6,0,1" type="UnityEngine.Color"
+        id="_aspectColor" /><field value="-0.5" type="System.Single" id="_outlineColorOffset"
+        /><field value="0.4" type="System.Single" id="_selectionColorOffset" /><field
+        value="1" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
+        id="_mountPoint" gameobject="2" /><field value="0,0.5,0" type="UnityEngine.Vector3"
+        id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
+        /></reference></references></component>
       objectReference: {fileID: 0}
     - target: {fileID: 11412698, guid: 0d6b37f7c7179e644b37f1bc3dacf0d3, type: 2}
       propertyPath: _dataSerializer._serializedGameObjects.Array.size
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 11412698, guid: 0d6b37f7c7179e644b37f1bc3dacf0d3, type: 2}
       propertyPath: _dataSerializer._serializedGameObjects.Array.data[0]
@@ -1260,6 +1270,14 @@ Prefab:
       propertyPath: _dataSerializer._serializedGameObjects.Array.data[4]
       value: 
       objectReference: {fileID: 1248571385}
+    - target: {fileID: 11412698, guid: 0d6b37f7c7179e644b37f1bc3dacf0d3, type: 2}
+      propertyPath: _dataSerializer._serializedGameObjects.Array.data[5]
+      value: 
+      objectReference: {fileID: 991101653}
+    - target: {fileID: 11412698, guid: 0d6b37f7c7179e644b37f1bc3dacf0d3, type: 2}
+      propertyPath: _dataSerializer._serializedGameObjects.Array.data[6]
+      value: 
+      objectReference: {fileID: 1642865255}
     - target: {fileID: 11412698, guid: 0d6b37f7c7179e644b37f1bc3dacf0d3, type: 2}
       propertyPath: _dataSerializer._serializedCustomData.Array.size
       value: 0
