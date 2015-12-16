@@ -128,7 +128,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 454074}
   - 136: {fileID: 13690130}
-  - 114: {fileID: 11464182}
+  - 114: {fileID: 11496458}
   m_Layer: 0
   m_Name: Egg
   m_TagString: Egg
@@ -1819,7 +1819,7 @@ MonoBehaviour:
     - {fileID: 127502}
     - {fileID: 454074}
     _serializedCustomData: []
---- !u!114 &11464182
+--- !u!114 &11496458
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1827,13 +1827,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 127502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de5d364a3e2bccd4a96b3d2046b2945d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a97c07316c5f074f94206a03098feff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boy: {fileID: 142514, guid: 952b0f96a8d4a2a48878776810f1fec4, type: 2}
-  peopleVel: 2
-  bunnyVel: .100000001
-  hellephantVel: 1
+  _size: 0
+  _growingRate: .00999999978
+  _maxSize: 200
+  _spawnBoy: {fileID: 142514, guid: 952b0f96a8d4a2a48878776810f1fec4, type: 2}
+  _boyBite: .100000001
+  _bunnyBite: 2
+  _hellephantBite: 20
 --- !u!136 &13690130
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -1877,6 +1880,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: boy
+      value: 
+      objectReference: {fileID: 142514, guid: 952b0f96a8d4a2a48878776810f1fec4, type: 2}
+    - target: {fileID: 0}
+      propertyPath: _spawnBoy
       value: 
       objectReference: {fileID: 142514, guid: 952b0f96a8d4a2a48878776810f1fec4, type: 2}
     m_RemovedComponents: []

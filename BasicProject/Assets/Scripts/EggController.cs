@@ -51,9 +51,9 @@ public class EggController : MonoBehaviour {
 		}
 	}
 
-	public void lick(GameObject licker){
+	public void lick(string lickerTag){
 		float bite = 0f;
-		switch(licker.tag){
+		switch(lickerTag){
 		case "Boy":
 			bite = _boyBite;
 			break;
