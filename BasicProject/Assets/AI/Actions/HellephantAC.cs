@@ -6,7 +6,7 @@ using RAIN.Core;
 using RAIN.Representation;
 
 [RAINAction]
-public class animatorController : RAINAction
+public class HellephantAC : RAINAction
 {
 
 	Animator _animator;
