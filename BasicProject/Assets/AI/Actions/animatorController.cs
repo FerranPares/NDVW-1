@@ -20,10 +20,10 @@ public class animatorController : RAINAction
 
     public override ActionResult Execute(RAIN.Core.AI ai)
     {
-		bool movingBool = isMoving.Evaluate<bool>(ai.DeltaTime, ai.WorkingMemory);
-		if (movingBool == null) {
+		if (isMoving.IsNull) {
 			return ActionResult.FAILURE;
 		}
+		bool movingBool = isMoving.Evaluate<bool>(ai.DeltaTime, ai.WorkingMemory);
 		_animator.SetBool ("IsWalking", movingBool);
         return ActionResult.SUCCESS;
     }

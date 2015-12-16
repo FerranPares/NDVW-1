@@ -16,8 +16,8 @@ public class SpawnZombunny : RAINAction
     public override void Start(RAIN.Core.AI ai)
     {
         base.Start(ai);
-		_spawnPosition = (Vector3) position.Evaluate<Vector3> (ai.DeltaTime, ai.WorkingMemory);
-		_god = GameObject.FindGameObjectsWithTag("God");
+		_spawnPosition = position.Evaluate<Vector3> (ai.DeltaTime, ai.WorkingMemory);
+		_god = GameObject.FindGameObjectsWithTag("God")[0];
     }
 
     public override ActionResult Execute(RAIN.Core.AI ai)
