@@ -52,8 +52,8 @@ MonoBehaviour:
       debugbreak=&quot;False&quot; constraint=&quot;&quot;&gt;&lt;audio waituntildone=&quot;False&quot;
       repeatuntil=&quot;&quot; name=&quot;Purrrrrrrrrrrrrrrrrrrrrrffffffffffffffffffffffffff!!!!!!!&quot;
       forcestoponexit=&quot;False&quot; delay=&quot;0&quot; debugbreak=&quot;False&quot;
-      audiosource=&quot;Hellephant&quot; /&gt;&lt;constraint repeatuntil=&quot;&quot;
-      name=&quot;not so close the eggs&quot; debugbreak=&quot;False&quot; constraint=&quot;eggClose
+      audiosource=&quot;pur&quot; /&gt;&lt;constraint repeatuntil=&quot;&quot; name=&quot;not
+      so close the eggs&quot; debugbreak=&quot;False&quot; constraint=&quot;eggClose
       == null&quot;&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
       name=&quot;where is he?&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;too far to attack&quot;
@@ -88,8 +88,8 @@ MonoBehaviour:
       name=&quot;animatorController off&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
       /&gt;&lt;timer waitforsec=&quot;2&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
       name=&quot;siesta&quot; debugbreak=&quot;False&quot; /&gt;&lt;audio waituntildone=&quot;False&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;hurt&quot; forcestoponexit=&quot;False&quot;
-      delay=&quot;0&quot; debugbreak=&quot;False&quot; audiosource=&quot;Trunk1&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;burp&quot; forcestoponexit=&quot;False&quot;
+      delay=&quot;0&quot; debugbreak=&quot;False&quot; audiosource=&quot;burp&quot;
       /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;I love eggs&quot;
       debugbreak=&quot;False&quot; constraint=&quot;eggClose != null&quot;&gt;&lt;selector
@@ -123,8 +123,8 @@ MonoBehaviour:
       name=&quot;animatorController off&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
       /&gt;&lt;timer waitforsec=&quot;2&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
       name=&quot;siesta&quot; debugbreak=&quot;False&quot; /&gt;&lt;audio waituntildone=&quot;False&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;hurt&quot; forcestoponexit=&quot;False&quot;
-      delay=&quot;0&quot; debugbreak=&quot;False&quot; audiosource=&quot;Trunk1&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;burp&quot; forcestoponexit=&quot;False&quot;
+      delay=&quot;0&quot; debugbreak=&quot;False&quot; audiosource=&quot;burp&quot;
       /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;this guy look dangerous (has a gun)&quot; debugbreak=&quot;False&quot;
       constraint=&quot;boy != null&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
