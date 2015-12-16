@@ -9,6 +9,7 @@ public class EggController : MonoBehaviour {
 	public float _maxSize = 200f;
 	private Vector3 _originalScale;
 	private Vector3 _originalPosition;
+	public float _yOffset = 0.5f;
 
 	public GameObject _spawnBoy;
 	public float _boyBite = 0.1f;
@@ -26,9 +27,9 @@ public class EggController : MonoBehaviour {
 		float factor = (_size / _originalSize);
 		Vector3 scale = _originalScale * factor;
 		Vector3 position = _originalPosition;
-		position.y = position.y * factor;
+		position.y = position.y + _yOffset * (factor - 1.0f);
+
 		transform.localScale = scale;
-//		transform.position.Set(transform.position.x, _yOffset * factor, transform.position.z);
 		transform.position = position;
 
 		Debug.Log ("_size: " + _size.ToString());
