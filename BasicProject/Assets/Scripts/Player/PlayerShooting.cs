@@ -51,8 +51,10 @@ public class PlayerShooting : MonoBehaviour
     }
 
 
-    void Shoot ()
+    public void Shoot ()
     {
+
+		Debug.Log("dintre del Shoot");
         timer = 0f;
 
         gunAudio.Play ();
@@ -70,7 +72,9 @@ public class PlayerShooting : MonoBehaviour
 
         if(Physics.Raycast (shootRay, out shootHit, range, shootableMask))
         {
-            EnemyHealth enemyHealth = shootHit.collider.GetComponent <EnemyHealth> ();
+			Debug.Log("dintre del if del raycast");
+
+			EnemyHealth enemyHealth = shootHit.collider.GetComponent <EnemyHealth> ();
             if(enemyHealth != null)
             {
                 enemyHealth.TakeDamage (damagePerShot, shootHit.point);

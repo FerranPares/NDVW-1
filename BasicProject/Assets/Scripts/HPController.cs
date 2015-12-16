@@ -45,6 +45,5 @@ public class HPController : MonoBehaviour {
 			_tRig.AI.WorkingMemory.SetItem<int> ("hitPoints", _hitPoints);
 			_tRig.AI.WorkingMemory.SetItem<GameObject> ("attacker", _actualAttacker);
 		}
-		Debug.Log ("DAMAGED! HP=" + _hitPoints.ToString());
 	}
 }

@@ -10,13 +10,13 @@ public class ShootHim : RAINAction
 {
 	public Expression shootTarget = new Expression();
 	private GameObject _shootTarget;
-	private AudioSource _shootSource;
+	//private AudioSource _shootSource;
 
     public override void Start(RAIN.Core.AI ai)
     {
         base.Start(ai);
 		_shootTarget = (GameObject) shootTarget.Evaluate<GameObject> (ai.DeltaTime, ai.WorkingMemory);
-		_shootSource = ai.Body.GetComponent<AudioSource> ();
+		//_shootSource = ai.Body.GetComponent<AudioSource> ();
     }
 
     public override ActionResult Execute(RAIN.Core.AI ai)
@@ -25,7 +25,10 @@ public class ShootHim : RAINAction
 		if(hp == null){
 			return ActionResult.FAILURE;
 		}
-		_shootSource.Play();
+		//_shootSource.Play();
+		PlayerShooting ps = ai.Body.GetComponentInChildren<PlayerShooting> ();
+		ps.Shoot ();
+
 		hp.damage(ai.Body);
 		return ActionResult.SUCCESS;
     }
@@ -34,4 +37,5 @@ public class ShootHim : RAINAction
     {
         base.Stop(ai);
     }
+
 }

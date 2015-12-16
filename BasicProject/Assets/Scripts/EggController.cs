@@ -31,10 +31,7 @@ public class EggController : MonoBehaviour {
 
 		transform.localScale = scale;
 		transform.position = position;
-
-		Debug.Log ("_size: " + _size.ToString());
-		Debug.Log ("factor: " + factor.ToString());
-		Debug.Log ("scale: " + scale.ToString());
+	
 	}
 
 	// Set to 0.02s
