@@ -26,6 +26,7 @@ public class isIn : RAINAction
 
     public override ActionResult Execute(RAIN.Core.AI ai)
     {
+        /*
 		GameObject result = null;
 		foreach(GameObject match in _matches){
 			if(match.GetInstanceID() == _hellephantAttacker.GetInstanceID){
@@ -34,7 +35,9 @@ public class isIn : RAINAction
 			}
 		}
 		ai.WorkingMemory.SetItem<Vector3>(boyObject.VariableName, null);
+        */
         return ActionResult.SUCCESS;
+        
     }
 
     public override void Stop(RAIN.Core.AI ai)
