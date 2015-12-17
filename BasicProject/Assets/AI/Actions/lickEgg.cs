@@ -25,7 +25,7 @@ public class lickEgg : RAINAction
 
 		float quantity = ai.WorkingMemory.GetItem<float> ("chocolate");
 
-		ai.WorkingMemory.SetItem<float> ("chocolate",quantity-bite);
+		ai.WorkingMemory.SetItem<float> ("chocolate", quantity + bite);
 
 
         return ActionResult.SUCCESS;
