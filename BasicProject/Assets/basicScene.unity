@@ -1193,11 +1193,11 @@ Prefab:
         id="_isActive" /><field type="UnityEngine.GameObject" id="_body" gameobject="0"
         /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory"
         childrenvisible="False" /><field type="RAIN.Minds.BasicMind" reference="2"
-        id="_mind" childrenvisible="True" /><field type="RAIN.Motion.BasicMotor" reference="3"
-        id="_motor" childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator"
+        id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
+        reference="3" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator"
         reference="4" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
         reference="5" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-        reference="6" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+        reference="6" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
         id="_customElements" elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"
         /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
         type="System.Collections.Generic.List" id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"><field
@@ -1225,7 +1225,9 @@ Prefab:
         /><field type="System.Collections.Generic.List" id="_graphTags" elementtype="System.String"
         /></reference><reference type="RAIN.Perception.BasicSenses" refcount="1" id="6"><field
         type="System.Collections.Generic.List" id="_sensors" elementtype="RAIN.Perception.Sensors.RAINSensor"><field
-        type="RAIN.Perception.Sensors.AudioSensor" reference="10" id="element0" /></field></reference><reference
+        type="RAIN.Perception.Sensors.AudioSensor" reference="10" id="element0" /><field
+        type="RAIN.Perception.Sensors.VisualSensor" reference="11" id="element1" /><field
+        type="RAIN.Perception.Sensors.VisualSensor" reference="12" id="element2" /></field></reference><reference
         type="RAIN.Memory.BasicMemory+MemoryItem" refcount="1" id="7"><field value="hitPoints"
         type="System.String" id="Key" /><field value="System.Int32" type="System.Type"
         id="ValueType" /><field value="0" type="System.Int32" id="Value" /></reference><reference
@@ -1245,11 +1247,36 @@ Prefab:
         elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="40"
         type="System.Single" id="_range" /><field value="False" type="System.Boolean"
         id="_canDetectSelf" /><field value="0.1" type="System.Single" id="_volumeThreshold"
-        /></reference></references></component>
+        /></reference><reference type="RAIN.Perception.Sensors.VisualSensor" refcount="1"
+        id="11"><field value="True" type="System.Boolean" id="_showVisual" /><field
+        value="eye" type="System.String" id="_sensorName" /><field value="True" type="System.Boolean"
+        id="_isActive" /><field value="0.6,0.5529412,0.009411765,1" type="UnityEngine.Color"
+        id="_sensorColor" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="3"
+        /><field value="0,0,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
+        value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field type="System.Collections.Generic.List"
+        id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
+        /><field value="15" type="System.Single" id="_range" /><field value="False"
+        type="System.Boolean" id="_canDetectSelf" /><field value="360" type="System.Single"
+        id="_horizontalAngle" /><field value="180" type="System.Single" id="_verticalAngle"
+        /><field value="False" type="System.Boolean" id="_lineOfSight" /><field value="-5"
+        type="UnityEngine.LayerMask" id="_lineOfSightMask" /></reference><reference
+        type="RAIN.Perception.Sensors.VisualSensor" refcount="1" id="12"><field value="True"
+        type="System.Boolean" id="_showVisual" /><field value="teeth" type="System.String"
+        id="_sensorName" /><field value="True" type="System.Boolean" id="_isActive"
+        /><field value="0.6,0.6,0.6,1" type="UnityEngine.Color" id="_sensorColor"
+        /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="4" /><field
+        value="0,0,0" type="UnityEngine.Vector3" id="_positionOffset" /><field value="0,0,0"
+        type="UnityEngine.Vector3" id="_angleOffset" /><field type="System.Collections.Generic.List"
+        id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
+        /><field value="2" type="System.Single" id="_range" /><field value="False"
+        type="System.Boolean" id="_canDetectSelf" /><field value="360" type="System.Single"
+        id="_horizontalAngle" /><field value="180" type="System.Single" id="_verticalAngle"
+        /><field value="False" type="System.Boolean" id="_lineOfSight" /><field value="-5"
+        type="UnityEngine.LayerMask" id="_lineOfSightMask" /></reference></references></component>
       objectReference: {fileID: 0}
     - target: {fileID: 11472854, guid: 0d6b37f7c7179e644b37f1bc3dacf0d3, type: 2}
       propertyPath: _dataSerializer._serializedGameObjects.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11472854, guid: 0d6b37f7c7179e644b37f1bc3dacf0d3, type: 2}
       propertyPath: _dataSerializer._serializedGameObjects.Array.data[0]
@@ -1262,6 +1289,14 @@ Prefab:
         type: 2}
     - target: {fileID: 11472854, guid: 0d6b37f7c7179e644b37f1bc3dacf0d3, type: 2}
       propertyPath: _dataSerializer._serializedGameObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 991101653}
+    - target: {fileID: 11472854, guid: 0d6b37f7c7179e644b37f1bc3dacf0d3, type: 2}
+      propertyPath: _dataSerializer._serializedGameObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: 991101653}
+    - target: {fileID: 11472854, guid: 0d6b37f7c7179e644b37f1bc3dacf0d3, type: 2}
+      propertyPath: _dataSerializer._serializedGameObjects.Array.data[4]
       value: 
       objectReference: {fileID: 991101653}
     - target: {fileID: 11472854, guid: 0d6b37f7c7179e644b37f1bc3dacf0d3, type: 2}
