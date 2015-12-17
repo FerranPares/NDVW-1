@@ -28,6 +28,7 @@ public class HPController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(_hitPoints <= 0){
+			//Animation Die then destroy
 			Destroy(this.gameObject);
 		}
 	}

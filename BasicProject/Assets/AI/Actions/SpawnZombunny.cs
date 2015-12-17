@@ -9,7 +9,7 @@ using RAIN.Representation;
 public class SpawnZombunny : RAINAction
 {
 
-	public Expression character = new Expression();
+//	public Expression character = new Expression();
 	private Vector3 _spawnPosition;
 	private GameObject _god;
 	private GameObject _character;
@@ -17,7 +17,8 @@ public class SpawnZombunny : RAINAction
     public override void Start(RAIN.Core.AI ai)
     {
         base.Start(ai);
-		_character = character.Evaluate<GameObject> (ai.DeltaTime, ai.WorkingMemory);
+//		_character = character.Evaluate<GameObject> (ai.DeltaTime, ai.WorkingMemory);
+		_character = ai.Body;
 		_spawnPosition = _character.transform.position;
 		_god = GameObject.FindGameObjectsWithTag("God")[0];
     }
