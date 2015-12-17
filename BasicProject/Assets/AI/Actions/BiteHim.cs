@@ -21,6 +21,7 @@ public class BiteHim : RAINAction
 	
 	public override ActionResult Execute(RAIN.Core.AI ai)
 	{
+        /*
 		HPController hp = _shootTarget.GetComponent<HPController> ();
 		if(hp == null){
 			return ActionResult.FAILURE;
@@ -30,6 +31,7 @@ public class BiteHim : RAINAction
 		//ps.Shoot ();
 		
 		hp.damage(ai.Body);
+        */
 		return ActionResult.SUCCESS;
 	}
 	

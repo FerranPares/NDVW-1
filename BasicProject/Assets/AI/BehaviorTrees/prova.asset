@@ -46,8 +46,8 @@ MonoBehaviour:
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
       aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;chocolate&amp;quot;&quot;
       /&gt;&lt;detect sensor=&quot;&amp;quot;nose&amp;quot;&quot; repeatuntil=&quot;running&quot;
-      name=&quot;smell pee&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;&quot;
-      debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;peeLocation&quot;
+      name=&quot;smell pee&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;peeLocation&quot;
+      debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
       aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;pee&amp;quot;&quot;
       /&gt;&lt;detect sensor=&quot;&amp;quot;nose&amp;quot;&quot; repeatuntil=&quot;running&quot;
       name=&quot;too close?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;evilClose&quot;
@@ -91,7 +91,7 @@ MonoBehaviour:
       succeed=&quot;all&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
       fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;move turnspeed=&quot;&quot;
       repeatuntil=&quot;&quot; name=&quot;move&quot; movetarget=&quot;fleeTarget&quot;
-      movespeed=&quot;5&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
+      movespeed=&quot;2&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
       closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;action
       repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot; parameters=&quot;aXNNb3Zpbmc=&quot;
       namespace=&quot;(global)&quot; name=&quot;animatorController&quot; debugbreak=&quot;False&quot;
