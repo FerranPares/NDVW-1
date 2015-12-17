@@ -5,7 +5,7 @@ using RAIN.Action;
 using RAIN.Core;
 
 [RAINAction]
-public class asdfasfasfas : RAINAction
+public class biteBoy : RAINAction
 {
     public override void Start(RAIN.Core.AI ai)
     {
