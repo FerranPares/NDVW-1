@@ -4,6 +4,7 @@ public class EnemyManager : MonoBehaviour
 {
     public GameObject _egg;
 	public GameObject _bunny;
+	// Spawning egg every 3 seconds!
     public float spawnTime = 3f;
 	private Vector3 EggPosition;
 
@@ -15,7 +16,7 @@ public class EnemyManager : MonoBehaviour
     void EggSpawn ()
     {
 		Vector3 position_offset = transform.position;
-		EggPosition.Set (Random.Range (-50, 50), 0, Random.Range (-50, 50));
+		EggPosition.Set (Random.Range (-50, 50), 3, Random.Range (-50, 50));
 		Vector3 spawnPoint = position_offset + EggPosition;
 
 		Instantiate(_egg, spawnPoint, Quaternion.identity);

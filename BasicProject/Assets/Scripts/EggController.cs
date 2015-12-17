@@ -8,8 +8,6 @@ public class EggController : MonoBehaviour {
 	public float _growingRate = 0.01f;
 	public float _maxSize = 200f;
 	private Vector3 _originalScale;
-	private Vector3 _originalPosition;
-	public float _yOffset = 0.5f;
 
 	public GameObject _spawnBoy;
 	public float _boyBite = 0.1f;
@@ -19,18 +17,14 @@ public class EggController : MonoBehaviour {
 	void Start () {
 		_size = _originalSize;
 		_originalScale = transform.localScale;
-		_originalPosition = transform.position;
 	}
 
 	void Update(){
 		//Change visual size of egg and its position to stay on terrain
 		float factor = (_size / _originalSize);
 		Vector3 scale = _originalScale * factor;
-		Vector3 position = _originalPosition;
-		position.y = position.y + _yOffset * (factor - 1.0f);
 
 		transform.localScale = scale;
-		transform.position = position;
 	
 	}
 
