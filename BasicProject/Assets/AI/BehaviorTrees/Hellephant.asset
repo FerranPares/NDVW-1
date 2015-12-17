@@ -41,25 +41,25 @@ MonoBehaviour:
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
       aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;chocolate&amp;quot;&quot;
       /&gt;&lt;constraint repeatuntil=&quot;&quot; name=&quot;hitted (to do)&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;&quot;&gt;&lt;audio waituntildone=&quot;False&quot;
-      repeatuntil=&quot;&quot; name=&quot;Purrrrrrrrrrrrrrrrrrrrrrffffffffffffffffffffffffff!!!!!!!&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;attacker != null&quot;&gt;&lt;audio
+      waituntildone=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;Purrrrrrrrrrrrrrrrrrrrrrffffffffffffffffffffffffff!!!!!!!&quot;
       forcestoponexit=&quot;False&quot; delay=&quot;0&quot; debugbreak=&quot;False&quot;
       audiosource=&quot;pur&quot; /&gt;&lt;/constraint&gt;&lt;selector usepriorities=&quot;False&quot;
       repeatuntil=&quot;running&quot; name=&quot;selector&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;feel lonely&quot;
       debugbreak=&quot;False&quot; constraint=&quot;evilPerson == null&quot;&gt;&lt;constraint
       repeatuntil=&quot;&quot; name=&quot;I have enough chocolate&quot; debugbreak=&quot;False&quot;
-      constraint=&quot;&quot;&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;AAAA&quot;
-      parameters=&quot;RmxlZURpc3RhbmNlAEZsZWVGcm9tAFN0YXlPbkdyYXBoAEZsZWVUYXJnZXRWYXJpYWJsZQ==&quot;
-      namespace=&quot;&quot; name=&quot;make bunnies&quot; debugbreak=&quot;False&quot;
-      classname=&quot;ChooseFleePosition&quot; /&gt;&lt;/constraint&gt;&lt;/constraint&gt;&lt;constraint
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;I love eggs&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;eggClose != null&quot;&gt;&lt;selector
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;I can...&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;almost touch them&quot; debugbreak=&quot;False&quot; constraint=&quot;eggTrump
-      == null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
-      repeatuntil=&quot;&quot; name=&quot;go for them&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;move
+      constraint=&quot;chocolate &amp;gt; 100&quot;&gt;&lt;action repeatuntil=&quot;&quot;
+      parametervalues=&quot;&quot; parameters=&quot;Y2hhcmFjdGVy&quot; namespace=&quot;&quot;
+      name=&quot;make bunnies&quot; debugbreak=&quot;False&quot; classname=&quot;SpawnZombunny&quot;
+      /&gt;&lt;/constraint&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;I love eggs&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;eggClose != null&quot;&gt;&lt;selector usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; name=&quot;I can...&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;almost touch them&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;eggTrump == null&quot;&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
+      name=&quot;go for them&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;move
       turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;go for them&quot;
       movetarget=&quot;eggClose&quot; movespeed=&quot;5&quot; facetarget=&quot;&quot;
       debugbreak=&quot;False&quot; closeenoughdistance=&quot;0.1&quot; closeenoughangle=&quot;&quot;
