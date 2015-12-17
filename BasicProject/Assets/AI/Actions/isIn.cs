@@ -18,10 +18,10 @@ public class isIn : RAINAction
     public override void Start(RAIN.Core.AI ai)
     {
         base.Start(ai);
-		_matches = sensorMatches.Evaluate<IList<GameObject>> (ai.DeltaTime, ai.WorkingMemory);
-		GameObject hellephant = GameObject.FindGameObjectsWithTag("Hellephant")[0];
-		AIRig aiHellephant = hellephant.GetComponentInChildren<AIRig> ();
-		_hellephantAttacker = aiHellephant.AI.WorkingMemory.GetItem<GameObject>("attacker");
+//		_matches = sensorMatches.Evaluate<IList<GameObject>> (ai.DeltaTime, ai.WorkingMemory);
+//		GameObject hellephant = GameObject.FindGameObjectsWithTag("Hellephant")[0];
+//		AIRig aiHellephant = hellephant.GetComponentInChildren<AIRig> ();
+//		_hellephantAttacker = aiHellephant.AI.WorkingMemory.GetItem<GameObject>("attacker");
     }
 
     public override ActionResult Execute(RAIN.Core.AI ai)
