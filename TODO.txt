@@ -1,6 +1,8 @@
 revisar crear bunnies
 revisar baixar chocolates i vides
 
+fer script que em doni el numero de objectes(bunnies detectats) ha de donar una variable int
+
 lick sound
 
 
