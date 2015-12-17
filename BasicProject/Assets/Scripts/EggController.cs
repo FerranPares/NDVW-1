@@ -41,9 +41,13 @@ public class EggController : MonoBehaviour {
 			Destroy(this.gameObject);
 			Instantiate(_spawnBoy, spawnPoint, Quaternion.identity);
 		}
+
+		if(_size <= 0f){
+			Destroy(this.gameObject);
+		}
 	}
 
-	public void lick(string lickerTag){
+	public float lick(string lickerTag){
 		float bite = 0f;
 		switch(lickerTag){
 		case "Boy":
@@ -58,5 +62,6 @@ public class EggController : MonoBehaviour {
 		}
 
 		_size = _size - bite;
+		return bite;
 	}
 }
