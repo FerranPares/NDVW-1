@@ -21,7 +21,13 @@ public class lickEgg : RAINAction
     public override ActionResult Execute(RAIN.Core.AI ai)
     {
 		EggController egg = _egg.GetComponent<EggController> ();
-		egg.lick (ai.Body.tag);
+		float bite = egg.lick (ai.Body.tag);
+
+		float quantity = ai.WorkingMemory.GetItem<float> ("chocolate");
+
+		ai.WorkingMemory.SetItem<float> ("chocolate",quantity-bite);
+
+
         return ActionResult.SUCCESS;
     }
 
