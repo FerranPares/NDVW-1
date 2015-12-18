@@ -1849,7 +1849,7 @@ MonoBehaviour:
   _size: 100
   _growingRate: .00999999978
   _maxSize: 200
-  _spawnBoy: {fileID: 142514, guid: 952b0f96a8d4a2a48878776810f1fec4, type: 2}
+  _spawnBoy: {fileID: 101154, guid: 952b0f96a8d4a2a48878776810f1fec4, type: 2}
   _boyBite: .100000001
   _bunnyBite: 2
   _hellephantBite: 20
@@ -1894,6 +1894,10 @@ Prefab:
         id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
         /></reference></references></component>
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: _spawnBoy
+      value: 
+      objectReference: {fileID: 101154, guid: 952b0f96a8d4a2a48878776810f1fec4, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 127502}

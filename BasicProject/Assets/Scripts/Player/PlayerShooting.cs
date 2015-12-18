@@ -57,7 +57,7 @@ public class PlayerShooting : MonoBehaviour
     public void Shoot ()
     {
 
-		Debug.Log("dintre del Shoot");
+		//Debug.Log("dintre del Shoot");
         timer = 0f;
 
         gunAudio.Play ();
@@ -75,7 +75,7 @@ public class PlayerShooting : MonoBehaviour
 
         if(Physics.Raycast (shootRay, out shootHit, range, shootableMask))
         {
-			Debug.Log("dintre del if del raycast");
+			//Debug.Log("dintre del if del raycast");
 
 			EnemyHealth enemyHealth = shootHit.collider.GetComponent <EnemyHealth> ();
             if(enemyHealth != null)

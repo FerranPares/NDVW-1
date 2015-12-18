@@ -10,7 +10,7 @@ public class EggController : MonoBehaviour {
 	private Vector3 _originalScale;
 
 	public GameObject _spawnBoy;
-	public float _boyBite = 0.1f;
+	public float _boyBite = 2f;
 	public float _bunnyBite = 2f;
 	public float _hellephantBite = 20f;
 	

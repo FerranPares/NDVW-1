@@ -15,12 +15,16 @@ public class ShootHim : RAINAction
     public override void Start(RAIN.Core.AI ai)
     {
         base.Start(ai);
-		_shootTarget = (GameObject) shootTarget.Evaluate<GameObject> (ai.DeltaTime, ai.WorkingMemory);
+		_shootTarget = shootTarget.Evaluate<GameObject> (ai.DeltaTime, ai.WorkingMemory);
 		//_shootSource = ai.Body.GetComponent<AudioSource> ();
     }
 
     public override ActionResult Execute(RAIN.Core.AI ai)
 	{
+        if(_shootTarget == null) {
+            Debug.Log("ShootHim:\n\tshootTarget is null!");
+            return ActionResult.FAILURE;
+        }
 		HPController hp = _shootTarget.GetComponent<HPController> ();
 		if(hp == null){
 			return ActionResult.FAILURE;

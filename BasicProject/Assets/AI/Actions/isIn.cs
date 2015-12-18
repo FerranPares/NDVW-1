@@ -9,36 +9,44 @@ using RAIN.Representation;
 public class isIn : RAINAction
 {
 
-	public Expression sensorMatches = new Expression();
-	public Expression boyObject = new Expression();
+    public Expression suspects = new Expression();
+    public Expression attacked = new Expression();
+    public Expression boyObject = new Expression();
 
-	IList<GameObject> _matches;
-	private GameObject _hellephantAttacker;
+    IList<RAIN.Entities.Aspects.RAINAspect> _allMatches;
+    GameObject _attacked;
+    private GameObject _attackedAttacker;
 
     public override void Start(RAIN.Core.AI ai)
     {
         base.Start(ai);
-		_matches = sensorMatches.Evaluate<IList<GameObject>> (ai.DeltaTime, ai.WorkingMemory);
-		Debug.Log ("isIN: _matches.Count()" + _matches.Count.ToString());
-		GameObject hellephant = GameObject.FindGameObjectsWithTag("Hellephant")[0];
-		AIRig aiHellephant = hellephant.GetComponentInChildren<AIRig> ();
-		_hellephantAttacker = aiHellephant.AI.WorkingMemory.GetItem<GameObject>("attacker");
     }
 
     public override ActionResult Execute(RAIN.Core.AI ai)
     {
-        /*
-		GameObject result = null;
-		foreach(GameObject match in _matches){
-			if(match.GetInstanceID() == _hellephantAttacker.GetInstanceID){
-				ai.WorkingMemory.SetItem<Vector3>(boyObject.VariableName, _hellephantAttacker);
-				return ActionResult.SUCCESS;
-			}
-		}
-		ai.WorkingMemory.SetItem<Vector3>(boyObject.VariableName, null);
-        */
+        _allMatches = suspects.Evaluate<IList<RAIN.Entities.Aspects.RAINAspect>>(ai.DeltaTime, ai.WorkingMemory);
+        _attacked = attacked.Evaluate<GameObject>(ai.DeltaTime, ai.WorkingMemory);
+        if (_allMatches == null || _attacked == null)
+        {
+            ai.WorkingMemory.SetItem<GameObject>(boyObject.VariableName, null);
+            return ActionResult.SUCCESS;
+        }
+        AIRig attackedAI = _attacked.GetComponentInChildren<AIRig>();
+        _attackedAttacker = attackedAI.AI.WorkingMemory.GetItem<GameObject>("attacker");
+
+
+        GameObject result = null;
+        foreach (RAIN.Entities.Aspects.RAINAspect aspect in _allMatches)
+        {
+            if (aspect.Entity.Form.GetInstanceID() == _attackedAttacker.GetInstanceID())
+            {
+                result = _attackedAttacker;
+                break;
+            }
+        }
+        ai.WorkingMemory.SetItem<GameObject>(boyObject.VariableName, result);
         return ActionResult.SUCCESS;
-        
+
     }
 
     public override void Stop(RAIN.Core.AI ai)

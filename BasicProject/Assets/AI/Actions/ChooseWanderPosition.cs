@@ -57,9 +57,6 @@ public class ChooseWanderPosition : RAINAction
         }
 
         ai.WorkingMemory.SetItem<Vector3>(WanderTargetVariable.VariableName, tDestination);
-		Debug.Log ("ChooseWanderPosition:\n" + 
-		           "\tPosition: " + ai.Body.transform.position.ToString() + "\n" + 
-		           "\tDestination: " + tDestination.ToString());
 
         return ActionResult.SUCCESS;
     }
