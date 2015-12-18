@@ -9,7 +9,7 @@ using RAIN.Representation;
 public class animatorController : RAINAction
 {
 
-	Animator _animator;
+	private Animator _animator;
 	public Expression isMoving = new Expression();
 
     public override void Start(RAIN.Core.AI ai)

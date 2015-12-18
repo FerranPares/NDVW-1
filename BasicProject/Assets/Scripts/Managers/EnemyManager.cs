@@ -10,7 +10,7 @@ public class EnemyManager : MonoBehaviour
 
     void Start ()
     {
-        InvokeRepeating ("EggSpawn", spawnTime, spawnTime);
+		InvokeRepeating ("EggSpawn", spawnTime, spawnTime);
     }
 
     void EggSpawn ()
