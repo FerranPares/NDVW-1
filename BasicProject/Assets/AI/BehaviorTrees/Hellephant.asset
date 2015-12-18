@@ -23,7 +23,7 @@ MonoBehaviour:
       /&gt;&lt;detect sensor=&quot;&amp;quot;noseShort&amp;quot;&quot; repeatuntil=&quot;running&quot;
       name=&quot;egg so so close?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;eggClose&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
-      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;chocolate&amp;quot;&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;eggChocolate&amp;quot;&quot;
       /&gt;&lt;detect sensor=&quot;&amp;quot;trump&amp;quot;&quot; repeatuntil=&quot;running&quot;
       name=&quot;enemy in range of trump?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;victim&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
@@ -31,7 +31,7 @@ MonoBehaviour:
       /&gt;&lt;detect sensor=&quot;&amp;quot;trump&amp;quot;&quot; repeatuntil=&quot;running&quot;
       name=&quot;eggs in range of trump?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;eggTrump&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
-      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;chocolate&amp;quot;&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;eggChocolate&amp;quot;&quot;
       /&gt;&lt;detect sensor=&quot;&amp;quot;eye&amp;quot;&quot; repeatuntil=&quot;running&quot;
       name=&quot;any boy close?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;boy&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
@@ -39,7 +39,7 @@ MonoBehaviour:
       /&gt;&lt;detect sensor=&quot;&amp;quot;noseLong&amp;quot;&quot; repeatuntil=&quot;running&quot;
       name=&quot;where are the eggs?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;eggFar&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
-      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;chocolate&amp;quot;&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;eggChocolate&amp;quot;&quot;
       /&gt;&lt;constraint repeatuntil=&quot;&quot; name=&quot;hitted (to do)&quot;
       debugbreak=&quot;False&quot; constraint=&quot;attacker != null&quot;&gt;&lt;audio
       waituntildone=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;Purrrrrrrrrrrrrrrrrrrrrrffffffffffffffffffffffffff!!!!!!!&quot;

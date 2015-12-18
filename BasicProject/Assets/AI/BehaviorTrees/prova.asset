@@ -44,7 +44,7 @@ MonoBehaviour:
       sensor=&quot;&amp;quot;nose&amp;quot;&quot; repeatuntil=&quot;running&quot;
       name=&quot;egg close?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;egg&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
-      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;chocolate&amp;quot;&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;eggChocolate&amp;quot;&quot;
       /&gt;&lt;detect sensor=&quot;&amp;quot;nose&amp;quot;&quot; repeatuntil=&quot;running&quot;
       name=&quot;smell pee&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;peeLocation&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;

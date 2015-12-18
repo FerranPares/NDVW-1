@@ -1823,11 +1823,11 @@ MonoBehaviour:
       elementtype="RAIN.Entities.Aspects.RAINAspect"><field type="RAIN.Entities.Aspects.VisualAspect"
       reference="1" id="element0" /></field></reference><reference type="RAIN.Entities.Aspects.VisualAspect"
       refcount="1" id="1"><field value="True" type="System.Boolean" id="_showVisual"
-      /><field value="chocolate" type="System.String" id="_aspectName" /><field value="True"
-      type="System.Boolean" id="_isActive" /><field value="0.6,0,0,1" type="UnityEngine.Color"
-      id="_aspectColor" /><field value="-0.5" type="System.Single" id="_outlineColorOffset"
-      /><field value="0.4" type="System.Single" id="_selectionColorOffset" /><field
-      value="1" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
+      /><field value="eggChocolate" type="System.String" id="_aspectName" /><field
+      value="True" type="System.Boolean" id="_isActive" /><field value="0.6,0,0,1"
+      type="UnityEngine.Color" id="_aspectColor" /><field value="-0.5" type="System.Single"
+      id="_outlineColorOffset" /><field value="0.4" type="System.Single" id="_selectionColorOffset"
+      /><field value="1" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
       id="_mountPoint" gameobject="1" /><field value="0,0.5,0" type="UnityEngine.Vector3"
       id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
       /></reference></references></component>
@@ -1846,7 +1846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a97c07316c5f074f94206a03098feff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _size: 0
+  _size: 100
   _growingRate: .00999999978
   _maxSize: 200
   _spawnBoy: {fileID: 142514, guid: 952b0f96a8d4a2a48878776810f1fec4, type: 2}
@@ -1885,7 +1885,7 @@ Prefab:
         id="_aspects" elementtype="RAIN.Entities.Aspects.RAINAspect"><field type="RAIN.Entities.Aspects.VisualAspect"
         reference="1" id="element0" /></field></reference><reference type="RAIN.Entities.Aspects.VisualAspect"
         refcount="1" id="1"><field value="True" type="System.Boolean" id="_showVisual"
-        /><field value="chocolate" type="System.String" id="_aspectName" /><field
+        /><field value="eggChocolate" type="System.String" id="_aspectName" /><field
         value="True" type="System.Boolean" id="_isActive" /><field value="0.6,0,0,1"
         type="UnityEngine.Color" id="_aspectColor" /><field value="-0.5" type="System.Single"
         id="_outlineColorOffset" /><field value="0.4" type="System.Single" id="_selectionColorOffset"
@@ -1894,23 +1894,6 @@ Prefab:
         id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
         /></reference></references></component>
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: boy
-      value: 
-      objectReference: {fileID: 142514, guid: 952b0f96a8d4a2a48878776810f1fec4, type: 2}
-    - target: {fileID: 0}
-      propertyPath: _spawnBoy
-      value: 
-      objectReference: {fileID: 142514, guid: 952b0f96a8d4a2a48878776810f1fec4, type: 2}
-    - target: {fileID: 0}
-      propertyPath: m_Constraints
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 566e8bb68b8cfc046b8b0ee48bc7937e,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 127502}

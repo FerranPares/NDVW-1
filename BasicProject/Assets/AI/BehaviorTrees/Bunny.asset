@@ -109,11 +109,11 @@ MonoBehaviour:
       /&gt;&lt;detect sensor=&quot;&amp;quot;nose&amp;quot;&quot; repeatuntil=&quot;running&quot;
       name=&quot;egg close?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;egg&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
-      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;chocolate&amp;quot;&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;eggChocolate&amp;quot;&quot;
       /&gt;&lt;detect sensor=&quot;&amp;quot;teeth&amp;quot;&quot; repeatuntil=&quot;running&quot;
       name=&quot;eggs in range of teeth?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;eggTeeth&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
-      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;chocolate&amp;quot;&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;eggChocolate&amp;quot;&quot;
       /&gt;&lt;detect sensor=&quot;&amp;quot;eye&amp;quot;&quot; repeatuntil=&quot;running&quot;
       name=&quot;see sweet bunny?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;sweetBunny&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
@@ -147,28 +147,29 @@ MonoBehaviour:
       movetarget=&quot;attackerClose&quot; movespeed=&quot;7&quot; facetarget=&quot;&quot;
       debugbreak=&quot;False&quot; closeenoughdistance=&quot;1&quot; closeenoughangle=&quot;&quot;
       /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot;
-      parameters=&quot;YWN0aW9uTmFtZQ==&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
-      on&quot; debugbreak=&quot;False&quot; classname=&quot;BoytAC&quot; /&gt;&lt;/parallel&gt;&lt;action
-      repeatuntil=&quot;&quot; parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;YWN0aW9uTmFtZQ==&quot;
-      namespace=&quot;(global)&quot; name=&quot;animatorController off&quot; debugbreak=&quot;False&quot;
-      classname=&quot;BoytAC&quot; /&gt;&lt;/constraint&gt;&lt;sequencer usepriorities=&quot;False&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;attack distance&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;&quot;
-      parameters=&quot;YWN0aW9uTmFtZQ==&quot; namespace=&quot;&quot; name=&quot;eat
-      it&quot; debugbreak=&quot;False&quot; classname=&quot;BoytAC&quot; /&gt;&lt;move
-      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;go for him&quot;
-      movetarget=&quot;attackerTeeth&quot; movespeed=&quot;7&quot; facetarget=&quot;&quot;
-      debugbreak=&quot;False&quot; closeenoughdistance=&quot;0.1&quot; closeenoughangle=&quot;&quot;
-      /&gt;&lt;timer waitforsec=&quot;random(2,5)&quot; returnvalue=&quot;success&quot;
-      name=&quot;(el temps que calgui per menjar-sho)&quot; debugbreak=&quot;False&quot;
-      /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot;
-      parameters=&quot;YWN0aW9uTmFtZQ==&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
-      on&quot; debugbreak=&quot;False&quot; classname=&quot;BoytAC&quot; /&gt;&lt;/parallel&gt;&lt;action
-      repeatuntil=&quot;&quot; priority=&quot;&quot; parametervalues=&quot;ZmFsc2U=&quot;
-      parameters=&quot;YWN0aW9uTmFtZQ==&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
-      off&quot; debugbreak=&quot;False&quot; classname=&quot;BoytAC&quot; /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;selector
+      parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
+      on&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
+      /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;ZmFsc2U=&quot;
+      parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
+      off&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
+      /&gt;&lt;/constraint&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;attack distance&quot; debugbreak=&quot;False&quot;&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;action
+      repeatuntil=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;YWN0aW9uTmFtZQ==&quot;
+      namespace=&quot;&quot; name=&quot;eat it&quot; debugbreak=&quot;False&quot;
+      classname=&quot;BoytAC&quot; /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
+      name=&quot;go for him&quot; movetarget=&quot;attackerTeeth&quot; movespeed=&quot;7&quot;
+      facetarget=&quot;&quot; debugbreak=&quot;False&quot; closeenoughdistance=&quot;0.1&quot;
+      closeenoughangle=&quot;&quot; /&gt;&lt;timer waitforsec=&quot;random(2,5)&quot;
+      returnvalue=&quot;success&quot; name=&quot;(el temps que calgui per menjar-sho)&quot;
+      debugbreak=&quot;False&quot; /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot;
+      parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
+      on&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
+      /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot; priority=&quot;&quot;
+      parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot;
+      name=&quot;animatorController off&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
+      /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;selector
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;get close to friends&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;see Hellephant&quot;
@@ -179,24 +180,25 @@ MonoBehaviour:
       movetarget=&quot;hellephant&quot; movespeed=&quot;4&quot; facetarget=&quot;&quot;
       debugbreak=&quot;False&quot; closeenoughdistance=&quot;6&quot; closeenoughangle=&quot;&quot;
       /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot;
-      parameters=&quot;YWN0aW9uTmFtZQ==&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
-      on&quot; debugbreak=&quot;False&quot; classname=&quot;BoytAC&quot; /&gt;&lt;/parallel&gt;&lt;action
-      repeatuntil=&quot;&quot; parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;YWN0aW9uTmFtZQ==&quot;
-      namespace=&quot;(global)&quot; name=&quot;animatorController off&quot; debugbreak=&quot;False&quot;
-      classname=&quot;BoytAC&quot; /&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;see bunny&quot; debugbreak=&quot;False&quot;
-      constraint=&quot;bunny != null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot;
-      succeed=&quot;all&quot; repeatuntil=&quot;&quot; name=&quot;go for him&quot;
-      fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;move turnspeed=&quot;&quot;
-      repeatuntil=&quot;&quot; name=&quot;go for him&quot; movetarget=&quot;bunny&quot;
-      movespeed=&quot;4&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
-      closeenoughdistance=&quot;6&quot; closeenoughangle=&quot;&quot; /&gt;&lt;action
-      repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot; parameters=&quot;YWN0aW9uTmFtZQ==&quot;
-      namespace=&quot;(global)&quot; name=&quot;animatorController on&quot; debugbreak=&quot;False&quot;
-      classname=&quot;BoytAC&quot; /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot;
-      parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;YWN0aW9uTmFtZQ==&quot;
-      namespace=&quot;(global)&quot; name=&quot;animatorController off&quot; debugbreak=&quot;False&quot;
-      classname=&quot;BoytAC&quot; /&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint
+      parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
+      on&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
+      /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;ZmFsc2U=&quot;
+      parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
+      off&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
+      /&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;see bunny&quot; debugbreak=&quot;False&quot; constraint=&quot;bunny
+      != null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
+      repeatuntil=&quot;&quot; name=&quot;go for him&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;move
+      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;go for him&quot;
+      movetarget=&quot;bunny&quot; movespeed=&quot;4&quot; facetarget=&quot;&quot;
+      debugbreak=&quot;False&quot; closeenoughdistance=&quot;6&quot; closeenoughangle=&quot;&quot;
+      /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot;
+      parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
+      on&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
+      /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;ZmFsc2U=&quot;
+      parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
+      off&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
+      /&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;hear shotting&quot;
       debugbreak=&quot;False&quot; constraint=&quot;shooting != null &amp;amp;&amp;amp;
       hellephant == null&quot;&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
@@ -216,29 +218,29 @@ MonoBehaviour:
       turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;go for him&quot;
       movetarget=&quot;boy&quot; movespeed=&quot;7&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
       closeenoughdistance=&quot;1&quot; closeenoughangle=&quot;&quot; /&gt;&lt;action
-      repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot; parameters=&quot;YWN0aW9uTmFtZQ==&quot;
+      repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot; parameters=&quot;aXNNb3Zpbmc=&quot;
       namespace=&quot;(global)&quot; name=&quot;animatorController on&quot; debugbreak=&quot;False&quot;
-      classname=&quot;BoytAC&quot; /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot;
-      parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;YWN0aW9uTmFtZQ==&quot;
-      namespace=&quot;(global)&quot; name=&quot;animatorController off&quot; debugbreak=&quot;False&quot;
-      classname=&quot;BoytAC&quot; /&gt;&lt;/constraint&gt;&lt;sequencer usepriorities=&quot;False&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;attack distance&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;&quot;
-      parameters=&quot;&quot; namespace=&quot;(global)&quot; name=&quot;bite Boy&quot;
-      debugbreak=&quot;False&quot; classname=&quot;biteBoy&quot; /&gt;&lt;move turnspeed=&quot;&quot;
-      repeatuntil=&quot;&quot; name=&quot;go for him&quot; movetarget=&quot;boyTeeth&quot;
-      movespeed=&quot;7&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
-      closeenoughdistance=&quot;0.1&quot; closeenoughangle=&quot;&quot; /&gt;&lt;timer
-      waitforsec=&quot;random(2,5)&quot; returnvalue=&quot;success&quot; name=&quot;(el
-      temps que calgui per menjar-sho)&quot; debugbreak=&quot;False&quot; /&gt;&lt;action
-      repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot; parameters=&quot;YWN0aW9uTmFtZQ==&quot;
-      namespace=&quot;(global)&quot; name=&quot;animatorController on&quot; debugbreak=&quot;False&quot;
-      classname=&quot;BoytAC&quot; /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot;
-      priority=&quot;&quot; parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;YWN0aW9uTmFtZQ==&quot;
-      namespace=&quot;(global)&quot; name=&quot;animatorController off&quot; debugbreak=&quot;False&quot;
-      classname=&quot;BoytAC&quot; /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
+      classname=&quot;animatorController&quot; /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot;
+      parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot;
+      name=&quot;animatorController off&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
+      /&gt;&lt;/constraint&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;attack distance&quot; debugbreak=&quot;False&quot;&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;action
+      repeatuntil=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot;
+      namespace=&quot;(global)&quot; name=&quot;bite Boy&quot; debugbreak=&quot;False&quot;
+      classname=&quot;biteBoy&quot; /&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
+      name=&quot;go for him&quot; movetarget=&quot;boyTeeth&quot; movespeed=&quot;7&quot;
+      facetarget=&quot;&quot; debugbreak=&quot;False&quot; closeenoughdistance=&quot;0.1&quot;
+      closeenoughangle=&quot;&quot; /&gt;&lt;timer waitforsec=&quot;random(2,5)&quot;
+      returnvalue=&quot;success&quot; name=&quot;(el temps que calgui per menjar-sho)&quot;
+      debugbreak=&quot;False&quot; /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot;
+      parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
+      on&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
+      /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot; priority=&quot;&quot;
+      parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot;
+      name=&quot;animatorController off&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
+      /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;nobody attacks yet&quot;
       debugbreak=&quot;False&quot; constraint=&quot;attackBunny == null&quot;&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;union makes
@@ -266,11 +268,11 @@ MonoBehaviour:
       turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;go for him&quot;
       movetarget=&quot;boy&quot; movespeed=&quot;6&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
       closeenoughdistance=&quot;1&quot; closeenoughangle=&quot;&quot; /&gt;&lt;action
-      repeatuntil=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;YWN0aW9uTmFtZQ==&quot;
+      repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot; parameters=&quot;aXNNb3Zpbmc=&quot;
       namespace=&quot;(global)&quot; name=&quot;animatorController on&quot; debugbreak=&quot;False&quot;
-      classname=&quot;BoytAC&quot; /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot;
-      parametervalues=&quot;&quot; parameters=&quot;YWN0aW9uTmFtZQ==&quot; namespace=&quot;(global)&quot;
-      name=&quot;animatorController off&quot; debugbreak=&quot;False&quot; classname=&quot;BoytAC&quot;
+      classname=&quot;animatorController&quot; /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot;
+      parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot;
+      name=&quot;animatorController off&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
       /&gt;&lt;/constraint&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;attack distance&quot; debugbreak=&quot;False&quot;&gt;&lt;parallel
       tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
@@ -283,11 +285,12 @@ MonoBehaviour:
       closeenoughangle=&quot;&quot; /&gt;&lt;timer waitforsec=&quot;random(2,5)&quot;
       returnvalue=&quot;success&quot; name=&quot;(el temps que calgui per menjar-sho)&quot;
       debugbreak=&quot;False&quot; /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot;
-      parameters=&quot;YWN0aW9uTmFtZQ==&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
-      on&quot; debugbreak=&quot;False&quot; classname=&quot;BoytAC&quot; /&gt;&lt;/parallel&gt;&lt;action
-      repeatuntil=&quot;&quot; priority=&quot;&quot; parametervalues=&quot;ZmFsc2U=&quot;
-      parameters=&quot;YWN0aW9uTmFtZQ==&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
-      off&quot; debugbreak=&quot;False&quot; classname=&quot;BoytAC&quot; /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
+      parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
+      on&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
+      /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot; priority=&quot;&quot;
+      parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot;
+      name=&quot;animatorController off&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
+      /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;not enough bunnies
       close?&quot; debugbreak=&quot;False&quot; constraint=&quot;&quot;&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;move away&quot;
@@ -300,12 +303,12 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;move&quot; movetarget=&quot;fleeTarget&quot;
       movespeed=&quot;6&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
       closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;action
-      repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot; parameters=&quot;YWN0aW9uTmFtZQ==&quot;
+      repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot; parameters=&quot;aXNNb3Zpbmc=&quot;
       namespace=&quot;(global)&quot; name=&quot;animatorController on&quot; debugbreak=&quot;False&quot;
-      classname=&quot;BoytAC&quot; /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot;
-      priority=&quot;&quot; parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;YWN0aW9uTmFtZQ==&quot;
+      classname=&quot;animatorController&quot; /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;aXNNb3Zpbmc=&quot;
       namespace=&quot;(global)&quot; name=&quot;animatorController off&quot; debugbreak=&quot;False&quot;
-      classname=&quot;BoytAC&quot; /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint
+      classname=&quot;animatorController&quot; /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;I love eggs&quot;
       debugbreak=&quot;False&quot; constraint=&quot;egg != null&quot;&gt;&lt;selector
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;I can...&quot;
@@ -316,25 +319,26 @@ MonoBehaviour:
       turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;go for them&quot;
       movetarget=&quot;egg&quot; movespeed=&quot;4&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
       closeenoughdistance=&quot;0.1&quot; closeenoughangle=&quot;&quot; /&gt;&lt;action
-      repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot; parameters=&quot;YWN0aW9uTmFtZQ==&quot;
+      repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot; parameters=&quot;aXNNb3Zpbmc=&quot;
       namespace=&quot;(global)&quot; name=&quot;animatorController on&quot; debugbreak=&quot;False&quot;
-      classname=&quot;BoytAC&quot; /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot;
-      parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;YWN0aW9uTmFtZQ==&quot;
-      namespace=&quot;(global)&quot; name=&quot;animatorController off&quot; debugbreak=&quot;False&quot;
-      classname=&quot;BoytAC&quot; /&gt;&lt;/constraint&gt;&lt;sequencer usepriorities=&quot;False&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;bon appetite&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;fins que estigui tip (to do)&quot; debugbreak=&quot;False&quot; constraint=&quot;chocolate
-      &amp;lt; 101&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
+      classname=&quot;animatorController&quot; /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot;
+      parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot;
+      name=&quot;animatorController off&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
+      /&gt;&lt;/constraint&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;bon appetite&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;fins que estigui tip
+      (to do)&quot; debugbreak=&quot;False&quot; constraint=&quot;chocolate &amp;lt;
+      101&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
       repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;action
       repeatuntil=&quot;&quot; parametervalues=&quot;ZWdn&quot; parameters=&quot;dGFyZ2V0RWdn&quot;
       namespace=&quot;&quot; name=&quot;eat it&quot; debugbreak=&quot;False&quot;
       classname=&quot;lickEgg&quot; /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot;
-      parameters=&quot;YWN0aW9uTmFtZQ==&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
-      on&quot; debugbreak=&quot;False&quot; classname=&quot;BoytAC&quot; /&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;action
-      repeatuntil=&quot;&quot; priority=&quot;&quot; parametervalues=&quot;b2Zm&quot;
-      parameters=&quot;YWN0aW9uTmFtZQ==&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
-      off&quot; debugbreak=&quot;False&quot; classname=&quot;BoytAC&quot; /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint
+      parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
+      on&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
+      /&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;action repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;aXNNb3Zpbmc=&quot;
+      namespace=&quot;(global)&quot; name=&quot;animatorController off&quot; debugbreak=&quot;False&quot;
+      classname=&quot;animatorController&quot; /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Hello sweetie!!! I'm
       full of chocolate!!&quot; debugbreak=&quot;False&quot; constraint=&quot;sweetBunny
       != null &amp;amp;&amp;amp; chocolate &amp;gt;= 100&quot;&gt;&lt;constraint repeatuntil=&quot;&quot;
@@ -345,12 +349,13 @@ MonoBehaviour:
       movetarget=&quot;sweetBunny&quot; movespeed=&quot;5&quot; facetarget=&quot;&quot;
       debugbreak=&quot;False&quot; closeenoughdistance=&quot;0.1&quot; closeenoughangle=&quot;&quot;
       /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot;
-      parameters=&quot;YWN0aW9uTmFtZQ==&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
-      on&quot; debugbreak=&quot;False&quot; classname=&quot;BoytAC&quot; /&gt;&lt;/parallel&gt;&lt;action
-      repeatuntil=&quot;&quot; parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;YWN0aW9uTmFtZQ==&quot;
-      namespace=&quot;(global)&quot; name=&quot;animatorController off&quot; debugbreak=&quot;False&quot;
-      classname=&quot;BoytAC&quot; /&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
-      name=&quot;I got you my bunny ;)&quot; debugbreak=&quot;False&quot; constraint=&quot;sweetBunnyTeeth
+      parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
+      on&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
+      /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;ZmFsc2U=&quot;
+      parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
+      off&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
+      /&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot; name=&quot;I
+      got you my bunny ;)&quot; debugbreak=&quot;False&quot; constraint=&quot;sweetBunnyTeeth
       != null&quot;&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
       name=&quot;expression&quot; expression=&quot;chocolate = 0&quot; debugbreak=&quot;False&quot;
       /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot;
@@ -370,9 +375,9 @@ MonoBehaviour:
       repeatuntil=&quot;&quot; name=&quot;move&quot; movetarget=&quot;fleeTarget&quot;
       movespeed=&quot;2&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
       closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;action
-      repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot; parameters=&quot;YWN0aW9uTmFtZQ==&quot;
+      repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot; parameters=&quot;aXNNb3Zpbmc=&quot;
       namespace=&quot;(global)&quot; name=&quot;animatorController&quot; debugbreak=&quot;False&quot;
-      classname=&quot;BoytAC&quot; /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot;
+      classname=&quot;animatorController&quot; /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;aXNNb3Zpbmc=&quot;
       namespace=&quot;(global)&quot; name=&quot;animatorController&quot; debugbreak=&quot;False&quot;
       classname=&quot;animatorController&quot; /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;sequencer
