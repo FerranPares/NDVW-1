@@ -35,28 +35,28 @@ MonoBehaviour:
       debugbreak=&quot;False&quot; /&gt;&lt;/sequencer&gt;&lt;parallel tiebreaker=&quot;fail&quot;
       succeed=&quot;any&quot; repeatuntil=&quot;running&quot; name=&quot;auditive
       memory (shooter)&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot; name=&quot;remember
-      hearing hellephant&quot; debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;evaluate&quot;
+      usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot; name=&quot;remember&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;evaluate&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;noise != null&quot;
       expression=&quot;noise != null&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression
       returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;shooter = noise&quot; expression=&quot;shooter = noise&quot; debugbreak=&quot;False&quot;
       /&gt;&lt;timer waitforsec=&quot;8&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;corre Forrest Correr&quot; debugbreak=&quot;False&quot; /&gt;&lt;/sequencer&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot; name=&quot;noise
-      == null&quot; debugbreak=&quot;False&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot;
-      succeed=&quot;all&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot;
-      fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;evaluate&quot;
-      repeatuntil=&quot;&quot; name=&quot;noise == null&quot; expression=&quot;noise
-      == null &amp;amp;&amp;amp; shooter!=null&quot; debugbreak=&quot;False&quot;
-      /&gt;&lt;timer waitforsec=&quot;4&quot; returnvalue=&quot;success&quot; name=&quot;timer&quot;
-      debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;expression returnvalue=&quot;success&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;shooter = null&quot;
-      expression=&quot;shooter = null&quot; debugbreak=&quot;False&quot; /&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;detect
-      sensor=&quot;&amp;quot;nose&amp;quot;&quot; repeatuntil=&quot;running&quot;
-      name=&quot;egg close?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;egg&quot;
-      debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
-      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;eggChocolate&amp;quot;&quot;
+      name=&quot;time to change target&quot; debugbreak=&quot;False&quot; /&gt;&lt;/sequencer&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot; name=&quot;forget&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;evaluate&quot;
+      repeatuntil=&quot;&quot; name=&quot;noise == null &amp;amp;&amp;amp; shooter!=null&quot;
+      expression=&quot;noise == null &amp;amp;&amp;amp; shooter!=null&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;timer waitforsec=&quot;4&quot; returnvalue=&quot;success&quot; name=&quot;time
+      to forget&quot; debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;shooter = null&quot; expression=&quot;shooter = null&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;detect sensor=&quot;&amp;quot;nose&amp;quot;&quot;
+      repeatuntil=&quot;running&quot; name=&quot;egg close?&quot; matchtype=&quot;best&quot;
+      entityobjectvariable=&quot;egg&quot; debugbreak=&quot;False&quot; consistent=&quot;True&quot;
+      aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;eggChocolate&amp;quot;&quot;
       /&gt;&lt;detect sensor=&quot;&amp;quot;nose&amp;quot;&quot; repeatuntil=&quot;running&quot;
       name=&quot;smell pee&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;peeLocation&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
