@@ -155,7 +155,7 @@ MonoBehaviour:
       priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;move
       turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;go for it!&quot;
       movetarget=&quot;egg&quot; movespeed=&quot;3&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
-      closeenoughdistance=&quot;1&quot; closeenoughangle=&quot;&quot; /&gt;&lt;action
+      closeenoughdistance=&quot;2&quot; closeenoughangle=&quot;&quot; /&gt;&lt;action
       repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot; parameters=&quot;aXNNb3Zpbmc=&quot;
       namespace=&quot;(global)&quot; name=&quot;animatorController&quot; debugbreak=&quot;False&quot;
       classname=&quot;animatorController&quot; /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot;

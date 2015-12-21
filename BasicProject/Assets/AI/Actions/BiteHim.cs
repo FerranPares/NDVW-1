@@ -21,17 +21,18 @@ public class BiteHim : RAINAction
 	
 	public override ActionResult Execute(RAIN.Core.AI ai)
 	{
-        /*
-		HPController hp = _shootTarget.GetComponent<HPController> ();
-		if(hp == null){
+		HPController myHP = _shootTarget.GetComponent<HPController> ();
+		if(myHP == null){
 			return ActionResult.FAILURE;
 		}
-		//_shootSource.Play();
-		//PlayerShooting ps = ai.Body.GetComponentInChildren<PlayerShooting> ();
-		//ps.Shoot ();
-		
-		hp.damage(ai.Body);
-        */
+        myHP.setTarget(_shootTarget);
+
+        HPController hp = _shootTarget.GetComponent<HPController>();
+        if (hp == null)
+        {
+            return ActionResult.FAILURE;
+        }
+        hp.damage(ai.Body);
 		return ActionResult.SUCCESS;
 	}
 	

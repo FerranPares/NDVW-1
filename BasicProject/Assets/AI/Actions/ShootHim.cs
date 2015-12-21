@@ -25,15 +25,18 @@ public class ShootHim : RAINAction
             Debug.Log("ShootHim:\n\tshootTarget is null!");
             return ActionResult.FAILURE;
         }
-		HPController hp = _shootTarget.GetComponent<HPController> ();
-		if(hp == null){
+		HPController myHP = ai.Body.GetComponent<HPController> ();
+		if(myHP == null){
 			return ActionResult.FAILURE;
 		}
-		//_shootSource.Play();
-		PlayerShooting ps = ai.Body.GetComponentInChildren<PlayerShooting> ();
+        myHP.setTarget(_shootTarget);
+
+		PlayerShoot ps = ai.Body.GetComponentInChildren<PlayerShoot> ();
 		ps.Shoot ();
 
-		hp.damage(ai.Body);
+
+
+		//hp.damage(ai.Body);
 		return ActionResult.SUCCESS;
     }
 

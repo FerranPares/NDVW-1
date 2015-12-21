@@ -11,8 +11,8 @@ public class EggController : MonoBehaviour {
 
 	public GameObject _spawnBoy;
 	public float _boyBite = 2f;
-	public float _bunnyBite = 2f;
-	public float _hellephantBite = 20f;
+	public float _bunnyBite = 10f;
+	public float _hellephantBite = 25f;
 	
 	void Start () {
 		_size = _originalSize;

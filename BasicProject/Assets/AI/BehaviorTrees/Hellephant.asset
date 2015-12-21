@@ -17,20 +17,13 @@ MonoBehaviour:
       debugbreak=&quot;False&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
       repeatuntil=&quot;&quot; name=&quot;root&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
       sensor=&quot;&amp;quot;lonely&amp;quot;&quot; repeatuntil=&quot;running&quot;
-      name=&quot;not so many friends around&quot; matchtype=&quot;all&quot; entityobjectvariable=&quot;&quot;
-      debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;ferran&quot;
+      name=&quot;not so many friends around&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;lonelyBunny&quot;
+      debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
       aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;vbunny&amp;quot;&quot;
-      /&gt;&lt;action repeatuntil=&quot;running&quot; parametervalues=&quot;ZmVycmFuAG51bU1hdGNoZXM=&quot;
-      parameters=&quot;c2Vuc29yTWF0Y2hlcwBudW1NYXRjaGVz&quot; namespace=&quot;&quot;
-      name=&quot;action&quot; debugbreak=&quot;False&quot; classname=&quot;howMany&quot;
       /&gt;&lt;detect sensor=&quot;&amp;quot;noseShort&amp;quot;&quot; repeatuntil=&quot;running&quot;
       name=&quot;egg so so close?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;eggClose&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
       aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;eggChocolate&amp;quot;&quot;
-      /&gt;&lt;detect sensor=&quot;&amp;quot;trump&amp;quot;&quot; repeatuntil=&quot;running&quot;
-      name=&quot;enemy in range of trump?&quot; matchtype=&quot;all&quot; entityobjectvariable=&quot;&quot;
-      debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;closeBoys&quot;
-      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;vboy&amp;quot;&quot;
       /&gt;&lt;detect sensor=&quot;&amp;quot;trump&amp;quot;&quot; repeatuntil=&quot;running&quot;
       name=&quot;eggs in range of trump?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;eggTrump&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
@@ -43,63 +36,60 @@ MonoBehaviour:
       name=&quot;where are the eggs?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;eggFar&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
       aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;eggChocolate&amp;quot;&quot;
-      /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;c2hvb3RUYXJnZXQ=&quot;
-      namespace=&quot;(global)&quot; name=&quot;Attacker disance&quot; debugbreak=&quot;False&quot;
-      classname=&quot;attackerDistance&quot; /&gt;&lt;sequencer usepriorities=&quot;False&quot;
-      repeatuntil=&quot;running&quot; name=&quot;feel lonely and have chocolate&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;evaluate&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;numMatches &amp;lt;
-      2 &amp;amp;&amp;amp; chocolate &amp;gt; 100&quot; expression=&quot;numMatches
-      &amp;lt; 2 &amp;amp;&amp;amp; chocolate &amp;gt; 100&quot; debugbreak=&quot;False&quot;
-      /&gt;&lt;action repeatuntil=&quot;&quot; priority=&quot;&quot; parametervalues=&quot;&quot;
-      parameters=&quot;&quot; namespace=&quot;&quot; name=&quot;make bunnies&quot;
-      debugbreak=&quot;False&quot; classname=&quot;SpawnZombunny&quot; /&gt;&lt;/sequencer&gt;&lt;selector
-      usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot; name=&quot;selector&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;under attack&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;evaluate&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;attacker != null&quot;
-      expression=&quot;attacker != null&quot; debugbreak=&quot;False&quot; /&gt;&lt;audio
-      waituntildone=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;Purrrrrrrrrrrrrrrrrrrrrrffffffffffffffffffffffffff!!!!!!!&quot; forcestoponexit=&quot;False&quot;
-      delay=&quot;0&quot; debugbreak=&quot;False&quot; audiosource=&quot;pur&quot;
-      /&gt;&lt;action repeatuntil=&quot;success&quot; priority=&quot;&quot; parametervalues=&quot;Y2xvc2VCb3lzAGhlbGxlcGhhbnQAdmljdGlt&quot;
-      parameters=&quot;c3VzcGVjdHMAYXR0YWNrZWQAYm95T2JqZWN0&quot; namespace=&quot;&quot;
-      name=&quot;action&quot; debugbreak=&quot;False&quot; classname=&quot;isIn&quot;
-      /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;where is he?&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer
+      /&gt;&lt;action repeatuntil=&quot;running&quot; parametervalues=&quot;YXR0YWNrZXJEaXN0YW5jZQ==&quot;
+      parameters=&quot;ZGlzdGFuY2U=&quot; namespace=&quot;(global)&quot; name=&quot;Attacker
+      distance&quot; debugbreak=&quot;False&quot; classname=&quot;attackerDistance&quot;
+      /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot;
+      name=&quot;feel lonely and have chocolate&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;lonelyBunny == null &amp;amp;&amp;amp; chocolate &amp;gt; 100&quot;
+      expression=&quot;lonelyBunny == null &amp;amp;&amp;amp; chocolate &amp;gt; 100&quot;
+      debugbreak=&quot;False&quot; /&gt;&lt;action repeatuntil=&quot;&quot; priority=&quot;&quot;
+      parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
+      name=&quot;make bunnies&quot; debugbreak=&quot;False&quot; classname=&quot;SpawnZombunny&quot;
+      /&gt;&lt;/sequencer&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot;
+      name=&quot;selector&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;under attack&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;attacker != null&quot;&gt;&lt;expression returnvalue=&quot;evaluate&quot;
+      repeatuntil=&quot;&quot; name=&quot;attacker != null&quot; expression=&quot;attacker
+      != null&quot; debugbreak=&quot;False&quot; /&gt;&lt;audio waituntildone=&quot;False&quot;
+      repeatuntil=&quot;&quot; name=&quot;Purrrrrrrrrrrrrrrrrrrrrrffffffffffffffffffffffffff!!!!!!!&quot;
+      forcestoponexit=&quot;False&quot; delay=&quot;0&quot; debugbreak=&quot;False&quot;
+      audiosource=&quot;pur&quot; /&gt;&lt;selector usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; name=&quot;where is he?&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;too far to attack&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
       returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;victim == null&quot; expression=&quot;victim == null&quot; debugbreak=&quot;False&quot;
-      /&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;run to him&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;move
-      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;run to him&quot;
-      movetarget=&quot;attacker&quot; movespeed=&quot;10&quot; facetarget=&quot;&quot;
-      debugbreak=&quot;False&quot; closeenoughdistance=&quot;2&quot; closeenoughangle=&quot;&quot;
-      /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot;
-      parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
-      on&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
-      /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot; priority=&quot;&quot;
-      parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot;
-      name=&quot;animatorController off&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
-      /&gt;&lt;/sequencer&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;in range of trump&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      name=&quot;attackerDistance &amp;gt;3&quot; expression=&quot;attackerDistance
+      &amp;gt;3&quot; debugbreak=&quot;False&quot; /&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;all&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;run
+      to him&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;move turnspeed=&quot;&quot;
+      repeatuntil=&quot;&quot; name=&quot;run to him&quot; movetarget=&quot;attacker&quot;
+      movespeed=&quot;10&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
+      closeenoughdistance=&quot;2&quot; closeenoughangle=&quot;&quot; /&gt;&lt;action
+      repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot; parameters=&quot;aXNNb3Zpbmc=&quot;
+      namespace=&quot;(global)&quot; name=&quot;animatorController on&quot; debugbreak=&quot;False&quot;
+      classname=&quot;animatorController&quot; /&gt;&lt;/parallel&gt;&lt;action repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametervalues=&quot;ZmFsc2U=&quot; parameters=&quot;aXNNb3Zpbmc=&quot;
+      namespace=&quot;(global)&quot; name=&quot;animatorController off&quot; debugbreak=&quot;False&quot;
+      classname=&quot;animatorController&quot; /&gt;&lt;/sequencer&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;in range of trump&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
       returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;victim != null&quot; expression=&quot;victim != null&quot; debugbreak=&quot;False&quot;
-      /&gt;&lt;action repeatuntil=&quot;&quot; priority=&quot;&quot; parametervalues=&quot;dmljdGlt&quot;
-      parameters=&quot;c2hvb3RUYXJnZXQ=&quot; namespace=&quot;&quot; name=&quot;eat
-      it&quot; debugbreak=&quot;False&quot; classname=&quot;BiteHim&quot; /&gt;&lt;timer
-      waitforsec=&quot;1&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;(el temps que calgui per menjar-sho)&quot; debugbreak=&quot;False&quot;
-      /&gt;&lt;expression returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;attacker == null&quot; expression=&quot;attacker
-      == null&quot; debugbreak=&quot;False&quot; /&gt;&lt;timer waitforsec=&quot;5&quot;
-      returnvalue=&quot;success&quot; priority=&quot;&quot; name=&quot;siesta&quot;
-      debugbreak=&quot;False&quot; /&gt;&lt;audio waituntildone=&quot;False&quot;
+      name=&quot;attackerDistance &amp;lt;=3&quot; expression=&quot;attackerDistance
+      &amp;lt;=3&quot; debugbreak=&quot;False&quot; /&gt;&lt;action repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametervalues=&quot;YXR0YWNrZXI=&quot; parameters=&quot;c2hvb3RUYXJnZXQ=&quot;
+      namespace=&quot;&quot; name=&quot;eat it&quot; debugbreak=&quot;False&quot;
+      classname=&quot;BiteHim&quot; /&gt;&lt;timer waitforsec=&quot;1&quot; returnvalue=&quot;success&quot;
+      priority=&quot;&quot; name=&quot;(el temps que calgui per menjar-sho)&quot;
+      debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;evaluate&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;attacker == null&quot;
+      expression=&quot;attacker == null&quot; debugbreak=&quot;False&quot; /&gt;&lt;timer
+      waitforsec=&quot;5&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;siesta&quot; debugbreak=&quot;False&quot; /&gt;&lt;audio waituntildone=&quot;False&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;burp&quot; forcestoponexit=&quot;False&quot;
       delay=&quot;0&quot; debugbreak=&quot;False&quot; audiosource=&quot;burp&quot;
-      /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/sequencer&gt;&lt;constraint repeatuntil=&quot;&quot;
+      /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;attacker == null&quot; debugbreak=&quot;False&quot;
       constraint=&quot;attacker == null&quot;&gt;&lt;selector usepriorities=&quot;False&quot;
       repeatuntil=&quot;&quot; name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer
@@ -117,7 +107,7 @@ MonoBehaviour:
       priority=&quot;&quot; name=&quot;go for them&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;move
       turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;go for them&quot;
       movetarget=&quot;eggClose&quot; movespeed=&quot;5&quot; facetarget=&quot;&quot;
-      debugbreak=&quot;False&quot; closeenoughdistance=&quot;2&quot; closeenoughangle=&quot;&quot;
+      debugbreak=&quot;False&quot; closeenoughdistance=&quot;2.5&quot; closeenoughangle=&quot;&quot;
       /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;dHJ1ZQ==&quot;
       parameters=&quot;aXNNb3Zpbmc=&quot; namespace=&quot;(global)&quot; name=&quot;animatorController
       on&quot; debugbreak=&quot;False&quot; classname=&quot;animatorController&quot;
