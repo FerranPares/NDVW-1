@@ -43,16 +43,19 @@ MonoBehaviour:
       name=&quot;where are the eggs?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;eggFar&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
       aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;eggChocolate&amp;quot;&quot;
-      /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot;
-      name=&quot;feel lonely and have chocolate&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
-      returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;numMatches &amp;lt; 2 &amp;amp;&amp;amp; chocolate &amp;gt; 100&quot;
-      expression=&quot;numMatches &amp;lt; 2 &amp;amp;&amp;amp; chocolate &amp;gt;
-      100&quot; debugbreak=&quot;False&quot; /&gt;&lt;action repeatuntil=&quot;&quot;
-      priority=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
-      name=&quot;make bunnies&quot; debugbreak=&quot;False&quot; classname=&quot;SpawnZombunny&quot;
-      /&gt;&lt;/sequencer&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot;
-      name=&quot;selector&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;c2hvb3RUYXJnZXQ=&quot;
+      namespace=&quot;(global)&quot; name=&quot;Attacker disance&quot; debugbreak=&quot;False&quot;
+      classname=&quot;attackerDistance&quot; /&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;running&quot; name=&quot;feel lonely and have chocolate&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;evaluate&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;numMatches &amp;lt;
+      2 &amp;amp;&amp;amp; chocolate &amp;gt; 100&quot; expression=&quot;numMatches
+      &amp;lt; 2 &amp;amp;&amp;amp; chocolate &amp;gt; 100&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;action repeatuntil=&quot;&quot; priority=&quot;&quot; parametervalues=&quot;&quot;
+      parameters=&quot;&quot; namespace=&quot;&quot; name=&quot;make bunnies&quot;
+      debugbreak=&quot;False&quot; classname=&quot;SpawnZombunny&quot; /&gt;&lt;/sequencer&gt;&lt;selector
+      usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot; name=&quot;selector&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;under attack&quot;
       debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;evaluate&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;attacker != null&quot;
