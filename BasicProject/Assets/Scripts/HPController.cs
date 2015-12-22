@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using RAIN.Core;
 
 public class HPController : MonoBehaviour
@@ -8,6 +9,7 @@ public class HPController : MonoBehaviour
     public int _hitPoints;
     private AIRig _tRig;
     private GameObject _actualAttacker;
+	private IList<GameObject> _listAttackers;
     private GameObject _actualTarget;
 
     private int _hellephantHP = 500;
@@ -24,18 +26,10 @@ public class HPController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //        ai = this.gameObject.GetComponent<RAIN.Core.AIRig> ();
-        //        _hitPoints = (int)ai.AI.WorkingMemory.GetItem("hitPoints");
         _hitPoints = 666;
         _actualAttacker = null;
+		_listAttackers = new List<GameObject>();
         _actualTarget = null;
-
-        _tRig = gameObject.GetComponentInChildren<AIRig>();
-
-        if (_tRig != null)
-        {
-            _tRig.AI.WorkingMemory.SetItem<int>("hitPoints", _hitPoints);
-        }
 
         if (tag == "Hellephant")
         {
@@ -53,84 +47,28 @@ public class HPController : MonoBehaviour
         {
             _hitPoints = _playerHP;
         }
+
+		_tRig = gameObject.GetComponentInChildren<AIRig>();
+		_tRig.AI.WorkingMemory.SetItem<int>("hitPoints", _hitPoints);
+		_tRig.AI.WorkingMemory.SetItem<GameObject>("attacker", _actualAttacker);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-
-        try
-        {
-            
-            Debug.Log("estic al update del " + this.tag.ToString());
-
-            GameObject go = GameObject.Find(_actualTarget.tag);
-            HPController hp = go.GetComponent<HPController>();
-            int vida = hp._hitPoints;
-            
-
-            Debug.Log(vida + "vidaaaaaa del target" + _actualTarget.tag);
-        }
-        catch
-        {
-            Debug.Log("Horrible things happened!");
-            //_actualTarget = null;
-            AIRig attackerAI = this.GetComponentInChildren<AIRig>();
-            attackerAI.AI.WorkingMemory.SetItem<GameObject>("attacker", null);
-
-
-        }
-        //Debug.Log(go.tag + "actual target");
-
-        /*
-        if (GameObject.Find(_actualTarget.tag))
-        {
-            Debug.Log("dintre el if dient que el player esta mort");
-            //attackerAI.AI.WorkingMemory.SetItem<GameObject>("attacker", null);
-        }
-        */
         if (_hitPoints <= 0)
         {
-            //Animation Die then destroy
-
-
-            //Target tRig
-            
-            Debug.Log("I'm " + this.tag + " and I gonna die so my atacker " + _actualAttacker.tag + "is gonna be assigned as null");
-
-
-            //----------- SON AKESTES DOS LINIES DE CODI ----------//
-            //HPController targetHP = _actualTarget.GetComponent<HPController>();
-            //targetHP.setAttacker(this.gameObject);
-
-            /*
-            Debug.Log("I'm " + this.tag + " and I gonna die so my target " + _actualAttacker.tag + "is gonna be assigned as null");
-            HPController attackerHP = _actualAttacker.GetComponent<HPController>();
-            attackerHP.setAttacker(this.gameObject);
-            */
-
-            //AIRig targetAI = _actualTarget.GetComponentInChildren<AIRig>();
-            //targetAI.AI.WorkingMemory.SetItem<GameObject>("attacker", null);
-            
-            AIRig attackerAI = _actualAttacker.GetComponentInChildren<AIRig>();
-
-
-            //Debug.Log(GameObject.Find("Boy").tag + "tag del boy");
-            //attackerAI.AI.WorkingMemory.SetItem<GameObject>("attacker", GameObject.Find("Boy"));
-            attackerAI.AI.WorkingMemory.SetItem<GameObject>("attacker", null);
-
-            Debug.Log("eeeeeeeeeeeeeeeeeeeeeeeestic al update del:" + this.gameObject.tag);
-
-            //Destroying object
+			foreach(GameObject attacker in _listAttackers){
+				HPController attackerHP = attacker.GetComponent<HPController>();
+				attackerHP.deleteAttacker(this.gameObject);
+			}
             Destroy(this.gameObject);
-            
         }
     }
 
     public void damage(GameObject attacker)
     {
-        Debug.Log("damage funcion, tag del que esta atacant " + attacker.tag);
+//        Debug.Log("damage funcion, tag del que esta atacant " + attacker.tag);
 
         int damage = 0;
         if (attacker.tag == "Hellephant")
@@ -151,28 +89,73 @@ public class HPController : MonoBehaviour
         }
 
         _hitPoints = _hitPoints - damage;
-        Debug.Log("hi point del bixo" + this.gameObject.tag + ": " + _hitPoints);
-        _actualAttacker = attacker;
-        if (_tRig != null)
-        {
-            _tRig.AI.WorkingMemory.SetItem<int>("hitPoints", _hitPoints);
-            _tRig.AI.WorkingMemory.SetItem<GameObject>("attacker", _actualAttacker);
-        }
+		_tRig.AI.WorkingMemory.SetItem<int>("hitPoints", _hitPoints);
+		// Play hurt sound
+		Transform attackedT = transform.FindChild("attacked");
+		AudioSource attackedAS = attackedT.GetComponent<AudioSource> ();
+		attackedAS.Play ();
+
+		addAttacker (attacker);
     }
 
     public void setTarget(GameObject target)
     {
         _actualTarget = target;
+//		_tRig.AI.WorkingMemory.SetItem<GameObject>("target", _actualTarget);
     }
 
-    public void setAttacker(GameObject attacker)
-    {
-        _actualAttacker = attacker;
-    }
+//    public void setAttacker(GameObject attacker)
+//    {
+//        _actualAttacker = attacker;
+//		_tRig.AI.WorkingMemory.SetItem<GameObject>("attacker", _actualAttacker);
+//    }
 
     public GameObject getAttacker()
     {
         return _actualAttacker;
     }
+
+	private void addAttacker(GameObject attacker)
+	{
+		if (!_listAttackers.Contains (attacker)) {
+			_listAttackers.Add(attacker);
+			if (_listAttackers.Count > 0){
+				if (_actualAttacker != _listAttackers[0]){
+					_actualAttacker = _listAttackers[0];
+					_tRig.AI.WorkingMemory.SetItem<GameObject>("attacker", _actualAttacker);
+				}
+			}
+		}
+	}
+
+	private void deleteAttacker(GameObject attacker)
+	{
+		if (_listAttackers.Contains (attacker)) {
+			_listAttackers.Remove (attacker);
+			if (_listAttackers.Count > 0) {
+				if (_actualAttacker != _listAttackers[0]){
+					_actualAttacker = _listAttackers[0];
+					_tRig.AI.WorkingMemory.SetItem<GameObject>("attacker", _actualAttacker);
+				}
+			} else {
+				_actualAttacker = null;
+				_tRig.AI.WorkingMemory.SetItem<GameObject>("attacker", _actualAttacker);
+			}
+		} 
+//		else {
+//			Debug.LogWarning("HPController: " + tag + 
+//			                 "\n\tTrying to delete attacker " + attacker.tag + 
+//			                 " from _listAttackers but it does not contain it!");
+//		}
+	}
+
+	public void announceDestroy(GameObject deleteGO){
+		//Target
+		if (_actualTarget == deleteGO) {
+			_actualTarget = null;
+		}
+		//Attackers
+		deleteAttacker (deleteGO);
+	}
 }
 

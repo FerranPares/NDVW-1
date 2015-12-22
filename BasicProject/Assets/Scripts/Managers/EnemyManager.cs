@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class EnemyManager : MonoBehaviour
 {
-    public GameObject _egg;
+	public GameObject _egg;
 	public GameObject _bunny;
+	public GameObject _boy;
 	// Spawning egg every 3 seconds!
     public float spawnTime = 3f;
 	private Vector3 EggPosition;
@@ -25,5 +28,10 @@ public class EnemyManager : MonoBehaviour
 	public void BunnySpawn(Vector3 spawnPoint){
 		// SpawnPoint passed by Armand -> probably exact same position than Hellephant: problem?
 		Instantiate(_bunny, spawnPoint, Quaternion.identity);
+	}
+
+	public void BoySpawn(Vector3 spawnPoint){
+		// SpawnPoint passed by Armand -> probably exact same position than Hellephant: problem?
+		Instantiate(_boy, spawnPoint, Quaternion.identity);
 	}
 }

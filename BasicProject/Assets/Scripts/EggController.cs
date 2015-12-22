@@ -9,7 +9,7 @@ public class EggController : MonoBehaviour {
 	public float _maxSize = 200f;
 	private Vector3 _originalScale;
 
-	public GameObject _spawnBoy;
+//	public GameObject _spawnBoy;
 	public float _boyBite = 2f;
 	public float _bunnyBite = 10f;
 	public float _hellephantBite = 25f;
@@ -37,9 +37,12 @@ public class EggController : MonoBehaviour {
 		if(_size > _maxSize)
 		{
 			// Instantiate BoyBot and destroy egg
-			Vector3 spawnPoint = transform.position;	
+			Vector3 spawnPoint = transform.position;
+			GameObject god = GameObject.FindGameObjectsWithTag("God")[0];
+			EnemyManager enemyM = god.GetComponent<EnemyManager>();
 			Destroy(this.gameObject);
-			Instantiate(_spawnBoy, spawnPoint, Quaternion.identity);
+			enemyM.BoySpawn(spawnPoint);
+//			Instantiate(_spawnBoy, spawnPoint, Quaternion.identity);
 		}
 
 		if(_size <= 0f){

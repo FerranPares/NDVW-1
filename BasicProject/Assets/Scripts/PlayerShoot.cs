@@ -76,8 +76,8 @@ public class PlayerShoot : MonoBehaviour
         if (Physics.Raycast(shootRay, out shootHit, range, shootableMask))
         {
 
-            HPController targetHP = shootHit.collider.gameObject.GetComponent<HPController>();
-            targetHP.damage(transform.parent.gameObject);
+//            HPController targetHP = shootHit.collider.gameObject.GetComponent<HPController>();
+//            targetHP.damage(transform.parent.gameObject);
 
             gunLine.SetPosition(1, shootHit.point);
         }

@@ -130,25 +130,19 @@ MonoBehaviour:
       name=&quot;smell friendly bunny?&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;friendBunny&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
       aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;vbunny&amp;quot;&quot;
-      /&gt;&lt;constraint repeatuntil=&quot;running&quot; name=&quot; hitted (ai)&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;attacker != null&quot;&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;audio waituntildone=&quot;False&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;ai!&quot; forcestoponexit=&quot;False&quot;
-      delay=&quot;0&quot; debugbreak=&quot;False&quot; audiosource=&quot;attacked&quot;
-      /&gt;&lt;timer waitforsec=&quot;2&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;time between ai&quot; debugbreak=&quot;False&quot; /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot; name=&quot;I
-      got you my bunny ;P&quot; debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;evaluate&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;sweetBunnyTeeth !=
-      null&quot; expression=&quot;sweetBunnyTeeth != null&quot; debugbreak=&quot;False&quot;
-      /&gt;&lt;expression returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;chocolate -= 100&quot; expression=&quot;chocolate
-      -= 100&quot; debugbreak=&quot;False&quot; /&gt;&lt;action repeatuntil=&quot;&quot;
-      priority=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;&quot;
-      name=&quot;make bunnies&quot; debugbreak=&quot;False&quot; classname=&quot;SpawnZombunny&quot;
-      /&gt;&lt;/sequencer&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot;
-      name=&quot;selector&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot;
+      name=&quot;I got you my bunny ;P&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;sweetBunnyTeeth != null &amp;amp;&amp;amp; chocolate &amp;gt; 100&quot;
+      expression=&quot;sweetBunnyTeeth != null &amp;amp;&amp;amp; chocolate &amp;gt;
+      100&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;chocolate -= 100&quot;
+      expression=&quot;chocolate -= 100&quot; debugbreak=&quot;False&quot; /&gt;&lt;action
+      repeatuntil=&quot;&quot; priority=&quot;&quot; parametervalues=&quot;&quot;
+      parameters=&quot;&quot; namespace=&quot;&quot; name=&quot;make bunnies&quot;
+      debugbreak=&quot;False&quot; classname=&quot;SpawnZombunny&quot; /&gt;&lt;/sequencer&gt;&lt;selector
+      usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot; name=&quot;selector&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;hellephan under attack&quot;
       debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;evaluate&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;heAttacked != null&quot;

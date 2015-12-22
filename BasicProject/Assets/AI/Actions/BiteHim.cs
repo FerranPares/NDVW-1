@@ -21,11 +21,11 @@ public class BiteHim : RAINAction
 	
 	public override ActionResult Execute(RAIN.Core.AI ai)
 	{
-		HPController myHP = _shootTarget.GetComponent<HPController> ();
-		if(myHP == null){
-			return ActionResult.FAILURE;
-		}
-        myHP.setTarget(_shootTarget);
+//		HPController myHP = _shootTarget.GetComponent<HPController> ();
+//		if(myHP == null){
+//			return ActionResult.FAILURE;
+//		}
+//        myHP.setTarget(_shootTarget);
 
         HPController hp = _shootTarget.GetComponent<HPController>();
         if (hp == null)
