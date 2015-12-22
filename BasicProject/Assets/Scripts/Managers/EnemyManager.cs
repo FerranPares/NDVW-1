@@ -27,6 +27,7 @@ public class EnemyManager : MonoBehaviour
 
 	public void BunnySpawn(Vector3 spawnPoint){
 		// SpawnPoint passed by Armand -> probably exact same position than Hellephant: problem?
+		spawnPoint.y = 3f;
 		Instantiate(_bunny, spawnPoint, Quaternion.identity);
 	}
 

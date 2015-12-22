@@ -35,7 +35,7 @@ public class ShootHim : RAINAction
 
 		// Attack doesnt take into account if it really hits to damage target!
 		HPController targetHP = _shootTarget.GetComponent<HPController>();
-		targetHP.damage(ai.Body);
+//		targetHP.damage(ai.Body);
 		return ActionResult.SUCCESS;
     }
 
